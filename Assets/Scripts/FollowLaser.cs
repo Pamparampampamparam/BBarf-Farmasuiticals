@@ -7,7 +7,8 @@ public class FollowLaser : MonoBehaviour
     //put script into cat object
     [SerializeField] private GameObject laser;
     [SerializeField] private float speed = 1.5f;
-    
+    [SerializeField] private float range= 5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class FollowLaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, laser.transform.position) < 5f)
+        if (Vector3.Distance(transform.position, laser.transform.position) < range)
         {
             transform.position = Vector3.MoveTowards(transform.position, laser.transform.position, speed * Time.deltaTime);
             transform.up = laser.transform.position - transform.position;
