@@ -7,6 +7,7 @@ public class FollowLaser : MonoBehaviour
     //put script into cat object
     [SerializeField] private GameObject laser;
     [SerializeField] private float speed = 1.5f;
+    
 
     // Start is called before the first frame update
     void Start()
