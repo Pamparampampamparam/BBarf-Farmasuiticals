@@ -35,8 +35,6 @@ public class CameraSwitch : MonoBehaviour
     void Update()
     {
         keyCodeCheck();
-        //ActivateLaser();
-        
     }
 
     private void keyCodeCheck()
@@ -50,25 +48,10 @@ public class CameraSwitch : MonoBehaviour
             if (laserActive) { 
                 this.laserActive = false;
                 laser_go.SetActive(false);
-                //laser.enabled = false;
             }
             else { 
                 this.laserActive = true;
                 laser_go.SetActive(true);
-                //laser.enabled = true;
-            }
-        }
-    }
-
-    private void ActivateLaser()
-    {
-        if (laserActive)
-        {
-
-            Ray laserRay = activeCam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(laserRay, out RaycastHit raycastHit))
-            {
-                transform.position = raycastHit.point;
             }
         }
     }
@@ -77,10 +60,7 @@ public class CameraSwitch : MonoBehaviour
     {
         this.currCam++;
 
-        if (this.currCam >= cameras.Length)
-        {
-            this.currCam = 0;
-        }
+        if (this.currCam >= cameras.Length) this.currCam = 0;
 
         for (int i = 0; i < cameras.Length; i++)
         {
@@ -94,10 +74,5 @@ public class CameraSwitch : MonoBehaviour
                 laser.setMainCamera(activeCam);
             }
         }
-    }
-
-    public Camera getActiveCamera()
-    {
-        return this.activeCam;
     }
 }

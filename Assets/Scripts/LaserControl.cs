@@ -9,19 +9,25 @@ public class LaserControl : MonoBehaviour
     //CameraSwitch camswitch = new CameraSwitch();
 
     private Camera activeCamera;
+    public LayerMask laserMask;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        //laserMask.value = 1 << 6;
+        //laserMask = ~laserMask;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //int laserMask = 1 << 6;
+        //laserMask = ~laserMask;
+
         Ray laserRay = activeCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(laserRay, out RaycastHit raycastHit))
+        if (Physics.Raycast(laserRay, out RaycastHit raycastHit, laserMask))
         {
+            //if(Physics.Linecast(laserRay, out, laserMask) )
             transform.position = raycastHit.point;
         }
     }

@@ -10,6 +10,7 @@ public class FieldOfView : MonoBehaviour
 
     public GameObject laserPointer;
     [SerializeField] private float checkDelay = 0.2f;
+    [SerializeField] private float speed = 1.5f;
 
     public LayerMask targetMask;
     public LayerMask obstructionMask;
@@ -26,7 +27,12 @@ public class FieldOfView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (laserPointerVisible)
+        {
+
+            transform.position = Vector3.MoveTowards(transform.position, laserPointer.transform.position, speed * Time.deltaTime);
+            transform.forward = laserPointer.transform.position - transform.position;
+        }
     }
 
     private IEnumerator FOVRoutiune(float delay)
@@ -43,7 +49,8 @@ public class FieldOfView : MonoBehaviour
         Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
         if (rangeChecks.Length > 0)
         {
-            Transform target = rangeChecks[0].transform;
+
+            Transform target = rangeChecks[0].transform;//laserPointer.transform;
             Vector3 directionToTarget = (target.position - transform.position).normalized;
 
             if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
@@ -56,6 +63,7 @@ public class FieldOfView : MonoBehaviour
             }
             else
                 laserPointerVisible = false;
+
         }
         else if (laserPointerVisible)
             laserPointerVisible = false;
