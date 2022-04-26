@@ -25,7 +25,7 @@ public class LaserControl : MonoBehaviour
         //laserMask = ~laserMask;
 
         Ray laserRay = activeCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(laserRay, out RaycastHit raycastHit, laserMask))
+        if (Physics.Raycast(laserRay, out RaycastHit raycastHit))
         {
             //if(Physics.Linecast(laserRay, out, laserMask) )
             transform.position = raycastHit.point;
