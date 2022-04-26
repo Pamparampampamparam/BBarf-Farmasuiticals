@@ -4,94 +4,80 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-    public GameObject Camera1;
-    public GameObject Camera2;
-    public AudioListener CamAuLis1;
-    public AudioListener CamAuLis2;
+    [SerializeField] private Camera[] cameras;
+    private AudioListener[] aud_list;
+
     private Camera activeCam;
+    private int currCam = 0;
+    private bool laserActive = true;
 
     //private [SerializeField] KeyCode;
 
     // Start is called before the first frame update
     void Start()
     {
-        cameraPositionChange(PlayerPrefs.GetInt("CameraPosition"));
+        this.aud_list = new AudioListener[cameras.Length];
+        for (int i = 0; i < cameras.Length; i++)
+        {
+            aud_list[i] = cameras[i].GetComponent<AudioListener>();
+            aud_list[i].enabled = false;
+        }
+        cameras[0].enabled = true;
+        aud_list[0].enabled = true;
+        this.activeCam = cameras[0];
     }
 
     // Update is called once per frame
     void Update()
     {
-        switchCamera();
-        Ray laserRay = activeCam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(laserRay, out RaycastHit raycastHit))
+        keyCodeCheck();
+        ActivateLaser();
+    }
+
+    private void keyCodeCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            transform.position = raycastHit.point;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (laserActive) this.laserActive = false;
+            else { this.laserActive = true; }
         }
     }
 
-    private void switchCamera()
+    private void ActivateLaser()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if (laserActive)
         {
-            cameraChangeIterator();
+            Ray laserRay = activeCam.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(laserRay, out RaycastHit raycastHit))
+            {
+                transform.position = raycastHit.point;
+            }
         }
     }
 
-    private void cameraChangeIterator()
+    private void cameraPositionChange()
     {
-        int cameraPositionCounter = PlayerPrefs.GetInt("CameraPosition");
-        cameraPositionCounter++;
-        cameraPositionChange(cameraPositionCounter);
-    }
+        this.currCam++;
 
-    private void cameraPositionChange(int camPos)
-    {
-        
-
-
-        if (camPos > 1)
+        if (this.currCam >= cameras.Length)
         {
-            camPos = 0;
+            this.currCam = 0;
         }
 
-        PlayerPrefs.SetInt("CameraPosition", camPos);
-
-        if (camPos == 0)
+        for (int i = 0; i < cameras.Length; i++)
         {
-            this.activeCam = Camera1.GetComponent<Camera>();
-            Camera1.SetActive(true);
-            CamAuLis1.enabled = true;
-
-            Camera2.SetActive(false);
-            CamAuLis2.enabled = false;
+            cameras[i].enabled = false;
+            aud_list[i].enabled = false;
+            if (i == this.currCam)
+            {
+                cameras[currCam].enabled = true;
+                aud_list[currCam].enabled = true;
+                this.activeCam = cameras[currCam];
+            }
         }
-
-        if (camPos == 1)
-        {
-            this.activeCam = Camera2.GetComponent<Camera>();
-            Camera2.SetActive(true);
-            CamAuLis2.enabled = true;
-
-            Camera1.SetActive(false);
-            CamAuLis1.enabled = false;
-        }
-
-
-
-        //for (int i = 0; i < Cameras.Length; i++)
-        //{
-        //    if(i != camPos)
-        //    {
-        //        Cameras[camPos].SetActive(false);
-        //        CameraAudioListener[camPos].enabled = false;
-        //    }
-        //    else
-        //    {
-        //        Cameras[i].SetActive(true);
-        //        CameraAudioListener[i].enabled = true;
-        //    }
-        //}
-
-        //disableOtherCameras(camPos);
     }
 }
