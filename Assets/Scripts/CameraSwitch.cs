@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
+    [SerializeField] private GameObject laser_go;
+    private LaserControl laser;
     [SerializeField] private Camera[] cameras;
     private AudioListener[] aud_list;
 
@@ -16,6 +18,7 @@ public class CameraSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        this.laser = laser_go.GetComponent<LaserControl>();
         this.aud_list = new AudioListener[cameras.Length];
         for (int i = 0; i < cameras.Length; i++)
         {
@@ -25,13 +28,15 @@ public class CameraSwitch : MonoBehaviour
         cameras[0].enabled = true;
         aud_list[0].enabled = true;
         this.activeCam = cameras[0];
+        laser.setMainCamera(activeCam);
     }
 
     // Update is called once per frame
     void Update()
     {
         keyCodeCheck();
-        ActivateLaser();
+        //ActivateLaser();
+        
     }
 
     private void keyCodeCheck()
@@ -42,8 +47,16 @@ public class CameraSwitch : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (laserActive) this.laserActive = false;
-            else { this.laserActive = true; }
+            if (laserActive) { 
+                this.laserActive = false;
+                laser_go.SetActive(false);
+                //laser.enabled = false;
+            }
+            else { 
+                this.laserActive = true;
+                laser_go.SetActive(true);
+                //laser.enabled = true;
+            }
         }
     }
 
@@ -51,6 +64,7 @@ public class CameraSwitch : MonoBehaviour
     {
         if (laserActive)
         {
+
             Ray laserRay = activeCam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(laserRay, out RaycastHit raycastHit))
             {
@@ -77,7 +91,13 @@ public class CameraSwitch : MonoBehaviour
                 cameras[currCam].enabled = true;
                 aud_list[currCam].enabled = true;
                 this.activeCam = cameras[currCam];
+                laser.setMainCamera(activeCam);
             }
         }
+    }
+
+    public Camera getActiveCamera()
+    {
+        return this.activeCam;
     }
 }
