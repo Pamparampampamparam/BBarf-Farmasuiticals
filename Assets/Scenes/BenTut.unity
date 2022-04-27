@@ -999,7 +999,7 @@ GameObject:
   - component: {fileID: 1867923803}
   - component: {fileID: 1867923802}
   - component: {fileID: 1867923806}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere
   m_TagString: Repel
   m_Icon: {fileID: 0}
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b57b6e2e41e5942aefed21ab3eca55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 50
+  range: 10
   strength: 10
 --- !u!1001 &1487512928472730059
 PrefabInstance:
@@ -1106,6 +1106,10 @@ PrefabInstance:
     - target: {fileID: 1487512928182529657, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
       propertyPath: m_Name
       value: Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487512928182529660, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
+      propertyPath: m_Center.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1487512928182529663, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
       propertyPath: m_RootOrder
