@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class LaserControl : MonoBehaviour
 {
-    //put into laser object
-    [SerializeField] private Camera mainCamera;
-
-    // Start is called before the first frame update
+    private Camera activeCamera;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Ray laserRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(laserRay, out RaycastHit raycastHit))
+        int layerMask = 1 << 0;
+
+        Ray laserRay = activeCamera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(laserRay, out RaycastHit raycastHit, Mathf.Infinity, layerMask))
         {
             transform.position = raycastHit.point;
         }
     }
+    public void setMainCamera(Camera setCam)
+    {
+        activeCamera = setCam;
+    }
 }
-//comment to commit
