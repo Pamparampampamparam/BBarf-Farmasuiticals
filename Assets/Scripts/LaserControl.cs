@@ -4,30 +4,19 @@ using UnityEngine;
 
 public class LaserControl : MonoBehaviour
 {
-    //put into laser object
-    //[SerializeField] private Camera mainCamera;
-    //CameraSwitch camswitch = new CameraSwitch();
-
     private Camera activeCamera;
-    public LayerMask laserMask;
-
-    // Start is called before the first frame update
     void Start()
     {
-        //laserMask.value = 1 << 6;
-        //laserMask = ~laserMask;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        //int laserMask = 1 << 6;
-        //laserMask = ~laserMask;
+        int layerMask = 1 << 0;
 
         Ray laserRay = activeCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(laserRay, out RaycastHit raycastHit))
+        if (Physics.Raycast(laserRay, out RaycastHit raycastHit, Mathf.Infinity, layerMask))
         {
-            //if(Physics.Linecast(laserRay, out, laserMask) )
             transform.position = raycastHit.point;
         }
     }
@@ -36,4 +25,3 @@ public class LaserControl : MonoBehaviour
         activeCamera = setCam;
     }
 }
-//comment to commit
