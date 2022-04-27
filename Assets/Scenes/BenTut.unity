@@ -646,26 +646,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &783879158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5394726978643999186, guid: 585f1553e05be01478e1497dcee88460, type: 3}
-  m_PrefabInstance: {fileID: 1399212816}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &783879159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783879158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d8cdcfc5e508634abc2b9bf44f73ce5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startKinematic: 1
-  forceMultiplier: 1
-  rb: {fileID: 0}
 --- !u!1 &827817570
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +888,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3608419379435701279, guid: 585f1553e05be01478e1497dcee88460, type: 3}
+      propertyPath: GO_LaserPointer
+      value: 
+      objectReference: {fileID: 393602994}
     - target: {fileID: 4726029963646133096, guid: 585f1553e05be01478e1497dcee88460, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -966,25 +950,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 585f1553e05be01478e1497dcee88460, type: 3}
---- !u!1 &1856979638 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5394726978643999186, guid: 585f1553e05be01478e1497dcee88460, type: 3}
-  m_PrefabInstance: {fileID: 5052056142154246909}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1856979643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856979638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b57b6e2e41e5942aefed21ab3eca55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 2
-  strength: 1
 --- !u!1 &1867923801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1181,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3608419379435701279, guid: 585f1553e05be01478e1497dcee88460, type: 3}
+      propertyPath: GO_LaserPointer
+      value: 
+      objectReference: {fileID: 393602994}
     - target: {fileID: 4726029963646133096, guid: 585f1553e05be01478e1497dcee88460, type: 3}
       propertyPath: m_RootOrder
       value: 2
