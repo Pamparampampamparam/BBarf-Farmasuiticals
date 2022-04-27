@@ -6,7 +6,7 @@ using UnityEngine;
 public class CatManager : MonoBehaviour
 {
     public float view_distance = 10;
-    [Range(0f, 360f)]
+    [Range(0f, 180f)]
     public float view_angle = 30;
     public float view_height = 1.0f;
     public Color meshColor = Color.red;

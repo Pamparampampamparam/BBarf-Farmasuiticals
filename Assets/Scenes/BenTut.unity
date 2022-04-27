@@ -663,9 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8cdcfc5e508634abc2b9bf44f73ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startKinematic: 1
-  forceMultiplier: 1
-  rb: {fileID: 0}
 --- !u!1 &827817570
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +905,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3608419379435701279, guid: 585f1553e05be01478e1497dcee88460, type: 3}
+      propertyPath: GO_LaserPointer
+      value: 
+      objectReference: {fileID: 393602994}
     - target: {fileID: 4726029963646133096, guid: 585f1553e05be01478e1497dcee88460, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1216,6 +1217,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3608419379435701279, guid: 585f1553e05be01478e1497dcee88460, type: 3}
+      propertyPath: GO_LaserPointer
+      value: 
+      objectReference: {fileID: 393602994}
     - target: {fileID: 4726029963646133096, guid: 585f1553e05be01478e1497dcee88460, type: 3}
       propertyPath: m_RootOrder
       value: 2
