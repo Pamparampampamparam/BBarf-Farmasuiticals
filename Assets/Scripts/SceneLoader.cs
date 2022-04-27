@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
-public class SceneLoader : MonoBehaviourSingleton<SceneLoader>
+public class SceneLoader : MonoBehaviour
 {
     public UnityEvent onScenesLoaded;
     private Animator transitionAnimator;
