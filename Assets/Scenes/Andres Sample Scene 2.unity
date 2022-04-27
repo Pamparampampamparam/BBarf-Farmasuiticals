@@ -221,11 +221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229225751881998223, guid: c889a0286bf746b479eb2a36016b1407, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.5
+      value: 6.32
       objectReference: {fileID: 0}
     - target: {fileID: 7229225751881998223, guid: c889a0286bf746b479eb2a36016b1407, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.3
+      value: 26.55
       objectReference: {fileID: 0}
     - target: {fileID: 7229225751881998223, guid: c889a0286bf746b479eb2a36016b1407, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1072,6 +1072,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1487512928182529660, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1487512928182529663, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1782,6 +1786,10 @@ PrefabInstance:
       propertyPath: LaserPointer
       value: 
       objectReference: {fileID: 1109746519}
+    - target: {fileID: 5052056142683358832, guid: 585f1553e05be01478e1497dcee88460, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5394726978643999186, guid: 585f1553e05be01478e1497dcee88460, type: 3}
       propertyPath: m_Name
       value: BaseCatMesh
