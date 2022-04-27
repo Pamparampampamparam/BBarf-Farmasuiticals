@@ -41,28 +41,55 @@ public class CameraSwitch : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            cameraPositionChange();
+            cameraPositionChangeUp();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (laserActive) { 
+            cameraPositionChangeDown();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (laserActive)
+            {
                 this.laserActive = false;
                 laser_go.SetActive(false);
             }
-            else { 
+            else
+            {
                 this.laserActive = true;
                 laser_go.SetActive(true);
             }
         }
+
     }
 
-    private void cameraPositionChange()
+    private void cameraPositionChangeUp()
     {
         this.currCam++;
 
         if (this.currCam >= cameras.Length) this.currCam = 0;
 
         for (int i = 0; i < cameras.Length; i++)
+        {
+            cameras[i].enabled = false;
+            aud_list[i].enabled = false;
+            if (i == this.currCam)
+            {
+                cameras[currCam].enabled = true;
+                aud_list[currCam].enabled = true;
+                this.activeCam = cameras[currCam];
+                laser.setMainCamera(activeCam);
+            }
+        }
+    }
+    private void cameraPositionChangeDown()
+    {
+        this.currCam++;
+
+        if (this.currCam <= cameras.Length) this.currCam = cameras.Length;
+
+        for (int i = 0; i < cameras.Length; i--)
         {
             cameras[i].enabled = false;
             aud_list[i].enabled = false;
