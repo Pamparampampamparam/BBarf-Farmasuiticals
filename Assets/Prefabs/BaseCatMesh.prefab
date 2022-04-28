@@ -280,7 +280,6 @@ GameObject:
   - component: {fileID: 5052056142683358833}
   - component: {fileID: 3608419379435701279}
   - component: {fileID: 2052898061}
-  - component: {fileID: 2052898059}
   - component: {fileID: 2052898060}
   m_Layer: 0
   m_Name: BaseCatMesh
@@ -370,24 +369,10 @@ SphereCollider:
   m_GameObject: {fileID: 5394726978643999186}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.96
-  m_Center: {x: 0, y: 1.65, z: 0}
---- !u!114 &2052898059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5394726978643999186}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b57b6e2e41e5942aefed21ab3eca55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 20
-  strength: 10
+  m_Radius: 1
+  m_Center: {x: 0, y: 1.36, z: 0}
 --- !u!114 &2052898060
 MonoBehaviour:
   m_ObjectHideFlags: 0
