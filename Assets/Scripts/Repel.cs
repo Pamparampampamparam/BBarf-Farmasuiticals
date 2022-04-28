@@ -5,9 +5,10 @@ using System.Collections.Generic;
  {
      List<MagnetizedObject> mo;
      public float range;
-     public float strength;
- 
-     public void Start()
+    public float strength;
+    //public GameObject laser_go;
+
+    public void Start()
      {
          mo = new List<MagnetizedObject>();
          gameObject.GetComponent<SphereCollider>().radius = range;
@@ -23,7 +24,8 @@ using System.Collections.Generic;
  
      public void OnTriggerEnter(Collider other)
      {
-         if(other.gameObject.CompareTag("Attract"))
+        
+        if (other.gameObject.CompareTag("Attract"))
          {
              MagnetizedObject newMag = new MagnetizedObject();
              newMag.col = other;
@@ -34,7 +36,8 @@ using System.Collections.Generic;
          }
          else if(other.gameObject.CompareTag("Repel"))
          {
-             MagnetizedObject newMag = new MagnetizedObject();
+            //laser_go.SetActive(false);
+            MagnetizedObject newMag = new MagnetizedObject();
              newMag.col = other;
              newMag.rb = other.GetComponent<Rigidbody>();
              newMag.t = other.transform;
@@ -45,7 +48,8 @@ using System.Collections.Generic;
  
      public void OnTriggerExit(Collider other)
      {
-         if(other.CompareTag("Attract") || other.CompareTag("Repel"))
+        //laser_go.SetActive(true);
+        if (other.CompareTag("Attract") || other.CompareTag("Repel"))
          {
              for(int i = 0; i < mo.Count; i++)
              {
