@@ -43,12 +43,12 @@ public class CameraSwitch : MonoBehaviour
         {
             cameraPositionChangeUp();
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            cameraPositionChangeDown();
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    cameraPositionChangeDown();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (laserActive)
             {
