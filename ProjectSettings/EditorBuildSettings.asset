@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Andres Sample Scene 2.unity
     guid: 3b9aeab45be19aa4d8c2beacf08512ec
+  - enabled: 1
+    path: Assets/Scenes/Andres/introscreen.unity
+    guid: c7fafcc535b772f4bb56976e403fa615
+  - enabled: 1
+    path: Assets/Scenes/Andres/Tutorial_lvl.unity
+    guid: b6ee129324d7ea24291b545dd276af50
   m_configObjects: {}
