@@ -15,7 +15,7 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
-  m_TransitionOffset: 0.21418571
+  m_TransitionOffset: 0.31
   m_ExitTime: 0.7659821
   m_HasExitTime: 1
   m_HasFixedDuration: 1
@@ -103,13 +103,13 @@ AnimatorStateTransition:
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4717999732887396295}
-  m_Solo: 0
+  m_Solo: 1
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0.21683156
-  m_ExitTime: 0.7838063
+  m_TransitionDuration: 0.6300001
+  m_TransitionOffset: 0.30574608
+  m_ExitTime: 0.71999997
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
