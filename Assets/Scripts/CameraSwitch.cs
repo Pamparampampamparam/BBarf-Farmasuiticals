@@ -25,9 +25,9 @@ public class CameraSwitch : MonoBehaviour
             aud_list[i] = cameras[i].GetComponent<AudioListener>();
             aud_list[i].enabled = false;
         }
-        //cameras[0].enabled = true;
-        //aud_list[0].enabled = true;
-        //this.activeCam = cameras[0];
+        cameras[0].enabled = true;
+        aud_list[0].enabled = true;
+        this.activeCam = cameras[0];
         laser.setMainCamera(activeCam);
     }
 
