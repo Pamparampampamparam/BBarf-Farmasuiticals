@@ -217,6 +217,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lowpoly_Cat_Persian
       objectReference: {fileID: 0}
+    - target: {fileID: 1517348132160154, guid: 7600be87c5b5d374785e9539d4f58146, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920073836695614, guid: 7600be87c5b5d374785e9539d4f58146, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4956064024305300, guid: 7600be87c5b5d374785e9539d4f58146, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -278,12 +286,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9000000, guid: 7856b0621df15f246ab7e46ed8ae6e24, type: 3}
     - target: {fileID: 95339858617298232, guid: 7600be87c5b5d374785e9539d4f58146, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95339858617298232, guid: 7600be87c5b5d374785e9539d4f58146, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c31426716c62a4145871972314a58405, type: 2}
     - target: {fileID: 95339858617298232, guid: 7600be87c5b5d374785e9539d4f58146, type: 3}
       propertyPath: m_UpdateMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 95339858617298232, guid: 7600be87c5b5d374785e9539d4f58146, type: 3}
       propertyPath: m_ApplyRootMotion
