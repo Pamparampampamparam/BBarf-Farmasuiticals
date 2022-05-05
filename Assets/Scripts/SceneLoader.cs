@@ -2,56 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 
 public class SceneLoader : MonoBehaviour
 {
-    public UnityEvent onScenesLoaded;
-    private Animator transitionAnimator;
-    public float progress { get; private set; }
+    private Scene currentScene;
 
-    private void Awake() {
-        transitionAnimator = GetComponentInChildren<Animator>();
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
 
-    // Also automatically loads BaseScene
-    public void LoadGameplayScene(string sceneName) {
-        StartCoroutine(LoadSceneCoroutine(sceneName, true));
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
-    public void LoadScene(string sceneName) {
-        StartCoroutine(LoadSceneCoroutine(sceneName, false));
-    }
 
-    private IEnumerator LoadSceneCoroutine(string sceneName, bool loadBaseScene) {
-        yield return null;
-
-        transitionAnimator.Play("Hide");
-        yield return new WaitForEndOfFrame();
-        yield return new WaitUntil(() => transitionAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1);
-
-        AsyncOperation sceneLoadOperation;
-
-        if (loadBaseScene) {
-            sceneLoadOperation = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
-            while (!sceneLoadOperation.isDone) {
-                progress = sceneLoadOperation.progress / 2;
-                yield return null;
-            }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Level 0 Portal")
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+        if (other.gameObject.tag == "Level1")
+        {
+        //    SceneManager.LoadScene("Level One");
+        }
+        if (other.gameObject.tag == "Level2")
+        {
+            SceneManager.LoadScene("AcelyaLvl");
+        }
+        if (other.gameObject.tag == "Level3")
+        {
+        //    SceneManager.LoadScene("Level Three");
         }
 
-        sceneLoadOperation = SceneManager.LoadSceneAsync(sceneName, loadBaseScene ? LoadSceneMode.Additive : LoadSceneMode.Single);
-        while (!sceneLoadOperation.isDone) {
-            progress = loadBaseScene ? (sceneLoadOperation.progress + 1) / 2 : sceneLoadOperation.progress;
-            yield return null;
+        if (other.gameObject.tag == "Level4")
+        {
+            SceneManager.LoadScene("Andres Sample Scene 2");
         }
 
-        yield return null;
-
-        onScenesLoaded.Invoke();
-
-        transitionAnimator.Play("Show");
-        yield return new WaitForEndOfFrame();
-        yield return new WaitUntil(() => transitionAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1);
+        if (other.gameObject.tag == "Level5")
+        {
+        //    SceneManager.LoadScene("Level Five");
+        }
     }
 }
