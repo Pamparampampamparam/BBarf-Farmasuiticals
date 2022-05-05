@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 3608419379435701279}
   - component: {fileID: 2052898061}
   - component: {fileID: 2052898060}
+  - component: {fileID: 6922951543007888104}
   m_Layer: 0
   m_Name: BaseCatMesh
   m_TagString: Repel
@@ -383,6 +384,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2beee6e8c43f484fa8da9d93a83f86d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6922951543007888104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5394726978643999186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f6428f901d85d4aac203c12c84bafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5423603977051296826
