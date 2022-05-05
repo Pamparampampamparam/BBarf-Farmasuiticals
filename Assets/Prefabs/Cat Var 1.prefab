@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 6598055052542826523}
   - component: {fileID: 6598055052542826522}
   - component: {fileID: 6598055052542826524}
+  - component: {fileID: 5787522491836187592}
   - component: {fileID: 6598055052542826521}
   - component: {fileID: 6598055052542826518}
   - component: {fileID: 6598055052542826519}
   - component: {fileID: 6598055052542826520}
   m_Layer: 0
   m_Name: Cat Var 1
-  m_TagString: Untagged
+  m_TagString: Repel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,14 +30,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6598055052542826525}
-  m_LocalRotation: {x: 0, y: -0.7933534, z: 0, w: 0.6087614}
-  m_LocalPosition: {x: 17.86, y: -0.301, z: -21.770002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1461530558394111459}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -105, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6598055052542826522
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79,6 +80,18 @@ MonoBehaviour:
   speed: 7
   GO_LaserPointer: {fileID: 0}
   scanFrequency: 0.2
+--- !u!114 &5787522491836187592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598055052542826525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f6428f901d85d4aac203c12c84bafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &6598055052542826521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91,7 +104,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1.4427142, z: 1.6418242}
-  m_Center: {x: 3.8524378e-10, y: 1.2213573, z: -0.045912445}
+  m_Center: {x: 3.8524378e-10, y: 0.7, z: -0.045912445}
 --- !u!65 &6598055052542826518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104,7 +117,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.67, z: 0.65}
-  m_Center: {x: 0, y: 2.14, z: 0.98}
+  m_Center: {x: 0, y: 1.61, z: 0.98}
 --- !u!65 &6598055052542826519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -117,7 +130,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.73, z: 1}
-  m_Center: {x: 0, y: 1.57, z: -1.34}
+  m_Center: {x: 0, y: 1.04, z: -1.34}
 --- !u!135 &6598055052542826520
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -130,7 +143,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
-  m_Center: {x: 0, y: 2.07, z: 0.97}
+  m_Center: {x: 0, y: 1.6, z: 0.97}
 --- !u!1001 &1466482220038523767
 PrefabInstance:
   m_ObjectHideFlags: 0
