@@ -13,12 +13,7 @@ public class BoxInteraction : MonoBehaviour
 
     void Update()
     {
-        if (hidden == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Coming out!");
-            cat.SetActive(true);
-            Instantiate(cat, spawnpos, rotation);
-        }
+        ComeOut();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -29,9 +24,21 @@ public class BoxInteraction : MonoBehaviour
         rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
         if (gameObject.tag == "Box" && hidden == false)
         {
-            cat.SetActive(false);
             hidden = true;
+            cat.SetActive(false);
             Debug.Log("Box detected!");
+            Debug.Log(hidden);
+        }
+    }
+
+    void ComeOut()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && hidden == true)
+        {
+            cat.SetActive(true);
+            Debug.Log(cat.activeSelf);
+            Instantiate(cat, spawnpos, rotation);
+            //Debug.Log("Coming out!");
         }
     }
 }
