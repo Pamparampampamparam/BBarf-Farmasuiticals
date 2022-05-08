@@ -18,9 +18,6 @@ public class CatManager : MonoBehaviour
     public List<GameObject> Objects = new List<GameObject>();
 
     public float speed = 4f;
-    public GameObject GO_LaserPointer;
-    public LaserControl LaserControl;
-
 
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
@@ -28,6 +25,8 @@ public class CatManager : MonoBehaviour
     public float meshResolution;
     public int edgeResolveIterations;
     public float edgeDstThreshold;
+
+    private bool laseractive = true;
 
 
     [SerializeField] private float scanFrequency = 0.2f;
@@ -47,11 +46,22 @@ public class CatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (laseractive)
+                this.laseractive = false;
+            else
+                this.laseractive = true;
+        }
+
+        //this.laseractive = LaserControl.laserActive();
         if (Objects.Count != 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, GO_LaserPointer.transform.position, speed * Time.deltaTime);
-            transform.forward = GO_LaserPointer.transform.position - transform.position;
+            transform.position = Vector3.MoveTowards(transform.position, Objects[0].transform.position, speed * Time.deltaTime);
+            transform.forward = Objects[0].transform.position - transform.position;
         }
+
+
 
     }
 
@@ -179,31 +189,37 @@ public class CatManager : MonoBehaviour
         Vector3 dest = obj.transform.position;
         Vector3 direction = dest - origin;
         float distance = direction.magnitude;
-        if (LaserControl.laserActive())
+        if (!this.laseractive)
         {
-            if (distance > view_distance)
-            {
-                return false;
-            }
-            if (direction.y < 0 || direction.y > view_height)
-            {
-                return false;
-            }
-            direction.y = 0;
-            float deltaAngle = Vector3.Angle(direction, transform.forward);
-            if (deltaAngle > view_angle / 2)
-            {
-                return false;
-            }
-            origin.y += view_height / 2;
-            dest.y = origin.y;
-            if (Physics.Linecast(origin, dest, obstacles))
-            {
-                return false;
-            }
-            return true;
+            return false;
         }
-        else { return false; }
+        //if (this.laseractive)
+        //{
+        if (distance > view_distance)
+        {
+            return false;
+        }
+        if (direction.y < 0 || direction.y > view_height)
+        {
+            return false;
+        }
+        direction.y = 0;
+        float deltaAngle = Vector3.Angle(direction, transform.forward);
+        if (deltaAngle > view_angle / 2)
+        {
+            return false;
+        }
+        origin.y += view_height / 2;
+        dest.y = origin.y;
+        if (Physics.Linecast(origin, dest, obstacles))
+        {
+            return false;
+        }
+        return true;
+        //}     else { return false; }
+
+        
+        
 
     }
 

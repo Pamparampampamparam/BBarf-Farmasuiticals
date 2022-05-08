@@ -31,7 +31,7 @@ public class LaserControl : MonoBehaviour
 
     public bool laserActive()
     {
-        return laseractive;
+        return this.laseractive;
     }
 
 
