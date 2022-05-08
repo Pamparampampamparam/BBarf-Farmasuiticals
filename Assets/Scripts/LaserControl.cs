@@ -6,6 +6,7 @@ public class LaserControl : MonoBehaviour
 {
     private Camera activeCamera;
     private bool laseractive = true;
+    [SerializeField] private MeshRenderer lasermesh;
     void Start()
     { }
 
@@ -15,13 +16,13 @@ public class LaserControl : MonoBehaviour
         {
             if (laseractive)
             {
-                gameObject.SetActive(false);
+                lasermesh.enabled = false;
                 this.laseractive = false;
                 //return false;
             }
             else
             {
-                gameObject.SetActive(true);
+                lasermesh.enabled = true;
                 this.laseractive = true;
                 //return true;
             }

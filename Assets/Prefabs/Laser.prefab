@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf90f566dab51574b942bae36748661d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lasermesh: {fileID: 1487512928182529661}
 --- !u!23 &1487512928182529661
 MeshRenderer:
   m_ObjectHideFlags: 0

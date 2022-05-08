@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-    [SerializeField] private GameObject laser_go;
-    private LaserControl laser;
+    [SerializeField] private LaserControl laser;
     [SerializeField] private Camera[] cameras;
     private AudioListener[] aud_list;
 
     private Camera activeCam;
     private int currCam = 0;
-    private bool laserActive = true;
+    
 
     //private [SerializeField] KeyCode;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.laser = laser_go.GetComponent<LaserControl>();
         this.aud_list = new AudioListener[cameras.Length];
         for (int i = 0; i < cameras.Length; i++)
         {
@@ -48,19 +46,7 @@ public class CameraSwitch : MonoBehaviour
         //    cameraPositionChangeDown();
         //}
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (laserActive)
-            {
-                this.laserActive = false;
-                laser_go.SetActive(false);
-            }
-            else
-            {
-                this.laserActive = true;
-                laser_go.SetActive(true);
-            }
-        }
+
 
     }
 
