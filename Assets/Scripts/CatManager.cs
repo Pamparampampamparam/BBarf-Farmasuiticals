@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 //[ExecuteInEditMode]
 public class CatManager : MonoBehaviour
 {
+    public NavMeshAgent agent;
+
     public float view_distance = 10f;
     [Range(0f, 180f)]
     public float view_angle = 60;
@@ -27,7 +30,6 @@ public class CatManager : MonoBehaviour
     public float edgeDstThreshold;
 
     private bool laseractive = true;
-
 
     [SerializeField] private float scanFrequency = 0.2f;
     Mesh mesh;
@@ -56,9 +58,11 @@ public class CatManager : MonoBehaviour
 
         if (Objects.Count != 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Objects[0].transform.position, speed * Time.deltaTime);
-            transform.forward = Objects[0].transform.position - transform.position;
+            agent.SetDestination(Objects[0].transform.position);
+            //transform.position = Vector3.MoveTowards(transform.position, Objects[0].transform.position, speed * Time.deltaTime);
+            //transform.forward = Objects[0].transform.position - transform.position;
         }
+        //else { transform.position = Vector3.zero; }
     }
 
     private void LateUpdate()
