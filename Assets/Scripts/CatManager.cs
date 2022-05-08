@@ -54,15 +54,11 @@ public class CatManager : MonoBehaviour
                 this.laseractive = true;
         }
 
-        //this.laseractive = LaserControl.laserActive();
         if (Objects.Count != 0)
         {
             transform.position = Vector3.MoveTowards(transform.position, Objects[0].transform.position, speed * Time.deltaTime);
             transform.forward = Objects[0].transform.position - transform.position;
         }
-
-
-
     }
 
     private void LateUpdate()
