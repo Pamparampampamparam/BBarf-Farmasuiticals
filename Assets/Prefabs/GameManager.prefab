@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed7fa5107e458a4b8b2339f14f7bce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser_go: {fileID: 0}
+  laser: {fileID: 0}
   cameras:
-  - {fileID: 0}
   - {fileID: 0}
