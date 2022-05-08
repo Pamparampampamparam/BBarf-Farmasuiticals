@@ -134,7 +134,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &6598055052542826524
 MonoBehaviour:
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb78808573af2441bf2a16c14a36251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  view_distance: 10
+  view_distance: 15
   view_angle: 60
   view_height: 5
   meshColor: {r: 1, g: 0, b: 0, a: 0.19607843}
@@ -160,8 +160,6 @@ MonoBehaviour:
     m_Bits: 1
   Objects: []
   speed: 7
-  GO_LaserPointer: {fileID: 0}
-  LaserControl: {fileID: 0}
   viewMeshFilter: {fileID: 6201736316392406612}
   meshResolution: 1
   edgeResolveIterations: 4
