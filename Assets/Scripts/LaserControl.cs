@@ -5,9 +5,35 @@ using UnityEngine;
 public class LaserControl : MonoBehaviour
 {
     private Camera activeCamera;
+    private bool laseractive = true;
     void Start()
     { }
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (laseractive)
+            {
+                gameObject.SetActive(false);
+                this.laseractive = false;
+                //return false;
+            }
+            else
+            {
+                gameObject.SetActive(true);
+                this.laseractive = true;
+                //return true;
+            }
+            laserActive();
+        }
+    }
+
+    public bool laserActive()
+    {
+        return laseractive;
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()
