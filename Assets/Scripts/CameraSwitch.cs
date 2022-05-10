@@ -4,29 +4,16 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-    [SerializeField] private LaserControl laser;
-    [SerializeField] private Camera[] cameras;
-    private AudioListener[] aud_list;
+    [SerializeField] private Camera curr_camera;
+    [SerializeField] private Transform[] cameraPos;
 
-    private Camera activeCam;
-    private int currCam = 0;
-    
-
-    //private [SerializeField] KeyCode;
+    private int cam_it = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.aud_list = new AudioListener[cameras.Length];
-        for (int i = 0; i < cameras.Length; i++)
-        {
-            aud_list[i] = cameras[i].GetComponent<AudioListener>();
-            aud_list[i].enabled = false;
-        }
-        cameras[0].enabled = true;
-        aud_list[0].enabled = true;
-        this.activeCam = cameras[0];
-        laser.setMainCamera(activeCam);
+        this.curr_camera.transform.position = cameraPos[this.cam_it].position;
+        this.curr_camera.transform.rotation = cameraPos[this.cam_it].rotation;
     }
 
     // Update is called once per frame
@@ -39,53 +26,22 @@ public class CameraSwitch : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            cameraPositionChangeUp();
+            ++this.cam_it;
+            cameraPositionChange();
         }
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    cameraPositionChangeDown();
-        //}
-
-
-
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            --this.cam_it;
+            cameraPositionChange();
+        }
     }
 
-    private void cameraPositionChangeUp()
+    private void cameraPositionChange()
     {
-        this.currCam++;
+        if (this.cam_it >= cameraPos.Length) { this.cam_it = 0; }
+        else if (this.cam_it < 0) { this.cam_it =  cameraPos.Length - 1; }
 
-        if (this.currCam >= cameras.Length) this.currCam = 0;
-
-        for (int i = 0; i < cameras.Length; i++)
-        {
-            cameras[i].enabled = false;
-            aud_list[i].enabled = false;
-            if (i == this.currCam)
-            {
-                cameras[currCam].enabled = true;
-                aud_list[currCam].enabled = true;
-                this.activeCam = cameras[currCam];
-                laser.setMainCamera(activeCam);
-            }
-        }
-    }
-    private void cameraPositionChangeDown()
-    {
-        this.currCam++;
-
-        if (this.currCam <= cameras.Length) this.currCam = cameras.Length;
-
-        for (int i = 0; i < cameras.Length; i--)
-        {
-            cameras[i].enabled = false;
-            aud_list[i].enabled = false;
-            if (i == this.currCam)
-            {
-                cameras[currCam].enabled = true;
-                aud_list[currCam].enabled = true;
-                this.activeCam = cameras[currCam];
-                laser.setMainCamera(activeCam);
-            }
-        }
+        this.curr_camera.transform.position = cameraPos[this.cam_it].position;
+        this.curr_camera.transform.rotation = cameraPos[this.cam_it].rotation;
     }
 }

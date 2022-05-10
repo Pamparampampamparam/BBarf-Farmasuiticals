@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserControl : MonoBehaviour
 {
-    private Camera activeCamera;
+    [SerializeField] private Camera currentCamera;
     private bool laseractive = true;
     [SerializeField] private MeshRenderer lasermesh;
     void Start()
@@ -12,7 +12,7 @@ public class LaserControl : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (laseractive)
             {
@@ -41,14 +41,14 @@ public class LaserControl : MonoBehaviour
     {
         int layerMask = 1 << 0;
 
-        Ray laserRay = activeCamera.ScreenPointToRay(Input.mousePosition);
+        Ray laserRay = currentCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(laserRay, out RaycastHit raycastHit, Mathf.Infinity, layerMask))
         {
             transform.position = raycastHit.point;
         }
     }
-    public void setMainCamera(Camera setCam)
-    {
-        activeCamera = setCam;
-    }
+    //public void setMainCamera(Camera setCam)
+    //{
+    //    currentCamera = setCam;
+    //}
 }
