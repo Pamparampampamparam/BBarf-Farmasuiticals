@@ -17,7 +17,11 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+            //SceneManager.LoadScene(currentScene);
+        }
     }
 
 

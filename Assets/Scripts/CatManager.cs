@@ -65,8 +65,6 @@ public class CatManager : MonoBehaviour
 
     private void followPreferedTarget()
     {
-        
-
         for(int i = 0; i < Objects.Count; i++)
         {
             if (Objects[i].CompareTag("LaserPointer"))
@@ -79,7 +77,7 @@ public class CatManager : MonoBehaviour
             {
                 catFood = Objects[i];
                 agent.SetDestination(catFood.transform.position);
-                print("tracking cat food");
+                print("tracking catFood");
             }
         }
         //if (Objects.Count != 0)
