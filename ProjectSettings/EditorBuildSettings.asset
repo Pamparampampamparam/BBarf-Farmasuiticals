@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Andres/Level0_Tutorial.unity
     guid: b6ee129324d7ea24291b545dd276af50
   - enabled: 1
-    path: Assets/Scenes/Aceyla/AcelyaLvl.unity
+    path: Assets/Scenes/Aceyla/Level2_Acelya.unity
     guid: 9bfea5a804c47184b8c918c84a1abac3
   - enabled: 1
     path: Assets/Scenes/Andres/Level4_Andres.unity
