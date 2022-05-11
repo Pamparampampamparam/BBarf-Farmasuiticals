@@ -42,7 +42,7 @@ using System.Collections.Generic;
              newMag.col = other;
              newMag.rb = other.GetComponent<Rigidbody>();
              newMag.t = other.transform;
-             newMag.polarity = -10;
+             newMag.polarity = -100;
              mo.Add(newMag);
          }
      }
