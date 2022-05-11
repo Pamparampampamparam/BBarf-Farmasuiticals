@@ -4944,9 +4944,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '2
-
-'
+  m_Text: 1
 --- !u!114 &1613564425390817600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5160,9 +5158,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '5
-
-'
+  m_Text: 4
 --- !u!224 &3321650703888629620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5393,7 +5389,7 @@ GameObject:
   - component: {fileID: 6630362150027232160}
   - component: {fileID: 7413694385992605472}
   m_Layer: 0
-  m_Name: 5
+  m_Name: 4
   m_TagString: CamButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5616,7 +5612,7 @@ GameObject:
   - component: {fileID: 7955661798859797730}
   - component: {fileID: 4204630703113397132}
   m_Layer: 0
-  m_Name: 1
+  m_Name: 0
   m_TagString: CamButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5655,9 +5651,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '4
-
-'
+  m_Text: 3
 --- !u!114 &7413694385992605472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5715,7 +5709,7 @@ GameObject:
   - component: {fileID: 1867689306948355166}
   - component: {fileID: 6149626080410051387}
   m_Layer: 0
-  m_Name: 2
+  m_Name: 1
   m_TagString: CamButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5734,7 +5728,7 @@ GameObject:
   - component: {fileID: 1931511393530282959}
   - component: {fileID: 4692999548326015478}
   m_Layer: 0
-  m_Name: 4
+  m_Name: 3
   m_TagString: CamButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5818,7 +5812,7 @@ VideoPlayer:
   m_VideoClip: {fileID: 32900000, guid: 5f3d112dfe798bc4ebd297426ec88342, type: 3}
   m_TargetCameraAlpha: 0.092
   m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
+  m_TargetCamera: {fileID: 1087138560}
   m_TargetTexture: {fileID: 0}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
@@ -5966,9 +5960,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1
-
-'
+  m_Text: 0
 --- !u!1 &8241613669762303849
 GameObject:
   m_ObjectHideFlags: 0
@@ -6034,9 +6026,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '3
-
-'
+  m_Text: 2
 --- !u!224 &8646113472887824916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6097,7 +6087,7 @@ GameObject:
   - component: {fileID: 1613564425390817600}
   - component: {fileID: 3483863775175617799}
   m_Layer: 0
-  m_Name: 3
+  m_Name: 2
   m_TagString: CamButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
