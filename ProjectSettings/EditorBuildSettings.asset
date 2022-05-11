@@ -8,15 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Andres/Intro_Screen.unity
     guid: c7fafcc535b772f4bb56976e403fa615
-  - enabled: 0
-    path: Assets/Scenes/Andres Sample Scene 2.unity
-    guid: 3b9aeab45be19aa4d8c2beacf08512ec
   - enabled: 1
     path: Assets/Scenes/Andres/Level0_Tutorial.unity
     guid: b6ee129324d7ea24291b545dd276af50
   - enabled: 1
     path: Assets/Scenes/Aceyla/Level2_Acelya.unity
     guid: 9bfea5a804c47184b8c918c84a1abac3
+  - enabled: 1
+    path: Assets/Scenes/Ben/Level3_Ben.unity
+    guid: 2490ead12eda8d94e8659767354fa0c8
   - enabled: 1
     path: Assets/Scenes/Andres/Level4_Andres.unity
     guid: 1adca09ccb2e1ac4baf485b6c8976ebe

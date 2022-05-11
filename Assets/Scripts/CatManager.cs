@@ -33,6 +33,8 @@ public class CatManager : MonoBehaviour
     public float edgeDstThreshold;
 
     private bool laseractive = true;
+    private bool isOnClimbableWall;
+
 
     [SerializeField] private float scanFrequency = 0.2f;
     Mesh mesh;
@@ -201,10 +203,11 @@ public class CatManager : MonoBehaviour
                     if (IsInSight(obj))
                     {
                         laserpointer = obj;
+                    } else if (isOnClimbableWall)
+                    {
+                        laserpointer = obj;
                     }
                 break;
-
-                //case ""
             }
         }
     }
