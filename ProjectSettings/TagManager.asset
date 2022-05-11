@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cat
-  - Box
+  - In_Box
+  - Out_Box
   layers:
   - Default
   - TransparentFX
