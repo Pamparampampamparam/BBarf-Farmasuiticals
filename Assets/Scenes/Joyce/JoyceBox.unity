@@ -507,10 +507,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 393602994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf90f566dab51574b942bae36748661d, type: 3}
+  m_Script: {fileID: 11500000, guid: f9b87c4b3fb513f45a587bd7fed0c050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 368792493}
+  laser: {fileID: 393602994}
+  speed: 1.5
 --- !u!4 &393602996
 Transform:
   m_ObjectHideFlags: 0
