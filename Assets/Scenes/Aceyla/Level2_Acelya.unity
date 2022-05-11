@@ -2118,8 +2118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
-  m_StartPoint: {x: -46.914673, y: -0.008659989, z: -26.182}
-  m_EndPoint: {x: -47.31149, y: 2.1937356, z: -26.181538}
+  m_StartPoint: {x: -45.985264, y: -0.65939355, z: -26.182}
+  m_EndPoint: {x: -47.289852, y: 1.3375897, z: -26.181538}
   m_Width: 200
   m_CostModifier: -1
   m_Bidirectional: 1
@@ -3140,6 +3140,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6598055052542826522, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598055052542826522, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}

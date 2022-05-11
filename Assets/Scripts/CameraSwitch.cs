@@ -5,10 +5,9 @@ using UnityEngine;
 public class CameraSwitch : MonoBehaviour
 {
     [SerializeField] private Camera curr_camera;
+    public int cam_it = 0;
     [SerializeField] private Transform[] cameraPos;
-
-    private int cam_it = 0;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +33,57 @@ public class CameraSwitch : MonoBehaviour
             --this.cam_it;
             cameraPositionChange();
         }
-        
-        
+
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            this.cam_it = 0;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            this.cam_it = 1;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            this.cam_it = 2;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            this.cam_it = 3;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            this.cam_it = 4;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            this.cam_it = 5;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            this.cam_it = 6;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            this.cam_it = 7;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            this.cam_it = 8;
+            cameraPositionChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            this.cam_it = 9;
+            cameraPositionChange();
+        }
     }
 
     private void cameraPositionChange()
