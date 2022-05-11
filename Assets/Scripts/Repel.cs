@@ -8,6 +8,7 @@ using System.Collections.Generic;
     public float strength;
     //public GameObject laser_go;
 
+    
     public void Start()
      {
          mo = new List<MagnetizedObject>();
@@ -71,6 +72,8 @@ using System.Collections.Generic;
          float attractionStrength = Mathf.Lerp(0f, strength, distanceScale);
  
          obj.rb.AddForce(rawDirection.normalized * attractionStrength * obj.polarity, ForceMode.Force);
+         
+         
      }
  }
  

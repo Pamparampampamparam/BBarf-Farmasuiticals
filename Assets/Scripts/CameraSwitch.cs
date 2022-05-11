@@ -34,6 +34,8 @@ public class CameraSwitch : MonoBehaviour
             --this.cam_it;
             cameraPositionChange();
         }
+        
+        
     }
 
     private void cameraPositionChange()
@@ -44,4 +46,6 @@ public class CameraSwitch : MonoBehaviour
         this.curr_camera.transform.position = cameraPos[this.cam_it].position;
         this.curr_camera.transform.rotation = cameraPos[this.cam_it].rotation;
     }
+
+   
 }
