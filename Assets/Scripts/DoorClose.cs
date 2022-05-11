@@ -8,7 +8,17 @@ public class DoorClose : MonoBehaviour
     [SerializeField] GameObject[] indicator;
     Color red = new Color(200, 0, 0, 1);
     Color green = new Color(0, 200, 0, 1);
+    [SerializeField] bool recovery;
+    Vector3[] originPos;
 
+    private void Start()
+    {
+        for (int i = 0; i < doors.Length; i++)
+        {
+            originPos = new Vector3[doors.Length];
+            originPos[i] = doors[i].transform.position;
+        }
+    }
     private void OnTriggerEnter(Collider col)
     {
         for (int i = 0; i < doors.Length; i++)
@@ -31,6 +41,7 @@ public class DoorClose : MonoBehaviour
     {
         for (int i = 0; i < doors.Length; i++)
         {
+            //if (recovery)
             if (doors[i].transform.position.y >= 20f)
             {
                 doors[i].transform.position -= new Vector3(0, 10, 0);
