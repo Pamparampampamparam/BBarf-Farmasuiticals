@@ -17,7 +17,11 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+            //SceneManager.LoadScene(currentScene);
+        }
     }
 
 
@@ -25,29 +29,27 @@ public class SceneLoader : MonoBehaviour
     {
         if (other.gameObject.tag == "Level 0 Portal")
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("Level0_Tutorial");
         }
         if (other.gameObject.tag == "Level1")
         {
-        //    SceneManager.LoadScene("Level One");
+            SceneManager.LoadScene("Level1_Emma");
         }
         if (other.gameObject.tag == "Level2")
         {
-            SceneManager.LoadScene("AcelyaLvl");
+            SceneManager.LoadScene("Level2_Acelya");
         }
         if (other.gameObject.tag == "Level3")
         {
-        //    SceneManager.LoadScene("Level Three");
+            SceneManager.LoadScene("Level3_Ben");
         }
-
         if (other.gameObject.tag == "Level4")
         {
-            SceneManager.LoadScene("Andres Sample Scene 2");
+            SceneManager.LoadScene("Level4_Andres");
         }
-
         if (other.gameObject.tag == "Level5")
         {
-        //    SceneManager.LoadScene("Level Five");
+            SceneManager.LoadScene("Level5_Joyce");
         }
     }
 }

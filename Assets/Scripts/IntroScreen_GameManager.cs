@@ -7,7 +7,7 @@ public class IntroScreen_GameManager : MonoBehaviour
 {
     public enum Scene
     {
-        Tutorial_lvl, 
+        Level0_Tutorial, 
     }
     public static void Load(Scene scene)
     {
@@ -18,7 +18,7 @@ public class IntroScreen_GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            Load(Scene.Tutorial_lvl);
+            Load(Scene.Level0_Tutorial);
         }
     }
 }

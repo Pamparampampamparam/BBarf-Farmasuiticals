@@ -6,6 +6,9 @@ using UnityEngine.AI;
 //[ExecuteInEditMode]
 public class CatManager : MonoBehaviour
 {
+    private GameObject laserpointer;
+    private GameObject catFood;
+
     public NavMeshAgent agent;
 
     public float view_distance = 10f;
@@ -55,14 +58,32 @@ public class CatManager : MonoBehaviour
             else
                 this.laseractive = true;
         }
+        followPreferedTarget();
 
-        if (Objects.Count != 0)
+
+    }
+
+    private void followPreferedTarget()
+    {
+        for(int i = 0; i < Objects.Count; i++)
         {
-            agent.SetDestination(Objects[0].transform.position);
-            //transform.position = Vector3.MoveTowards(transform.position, Objects[0].transform.position, speed * Time.deltaTime);
-            //transform.forward = Objects[0].transform.position - transform.position;
+            if (Objects[i].CompareTag("LaserPointer"))
+            {
+                laserpointer = Objects[i];
+                agent.SetDestination(laserpointer.transform.position);
+                print("tracking laser pointer");
+            }
+            else if(Objects[i].CompareTag("CatFood"))
+            {
+                catFood = Objects[i];
+                agent.SetDestination(catFood.transform.position);
+                print("tracking catFood");
+            }
         }
-        //else { transform.position = Vector3.zero; }
+        //if (Objects.Count != 0)
+        //{
+            //agent.SetDestination(Objects[0].transform.position);
+        //}
     }
 
     private void LateUpdate()
@@ -176,6 +197,10 @@ public class CatManager : MonoBehaviour
         for (int i = 0; i < count; ++i)
         {
             GameObject obj = colliders[i].gameObject;
+            if (obj.CompareTag("CatFood")){
+                agent.SetDestination(obj.transform.position);
+                print("tracking catFood");
+            }
             if (IsInSight(obj))
             {
                 Objects.Add(obj);
@@ -216,11 +241,6 @@ public class CatManager : MonoBehaviour
             return false;
         }
         return true;
-        //}     else { return false; }
-
-        
-        
-
     }
 
     private void OnDrawGizmos()
@@ -243,7 +263,6 @@ public class CatManager : MonoBehaviour
             Gizmos.DrawSphere(obj.transform.position, 0.2f);
         }
     }
-
 
     void DrawFieldOfView()
     {
@@ -371,6 +390,14 @@ public class CatManager : MonoBehaviour
         {
             pointA = _pointA;
             pointB = _pointB;
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("CatFood"))
+        {
+            agent.SetDestination(other.transform.position);
         }
     }
 }
