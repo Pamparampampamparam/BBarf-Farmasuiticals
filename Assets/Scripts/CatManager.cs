@@ -33,7 +33,6 @@ public class CatManager : MonoBehaviour
     public float edgeDstThreshold;
 
     private bool laseractive = true;
-    private bool isOnClimbableWall;
 
 
     [SerializeField] private float scanFrequency = 0.2f;
@@ -203,7 +202,8 @@ public class CatManager : MonoBehaviour
                     if (IsInSight(obj))
                     {
                         laserpointer = obj;
-                    } else if (isOnClimbableWall)
+                    } 
+                    else if (gameObject.transform.rotation.x != 0)
                     {
                         laserpointer = obj;
                     }
@@ -410,6 +410,4 @@ public class CatManager : MonoBehaviour
             pointB = _pointB;
         }
     }
-
 }
-
