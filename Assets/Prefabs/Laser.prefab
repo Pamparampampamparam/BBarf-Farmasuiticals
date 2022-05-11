@@ -43,9 +43,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1487512928182529657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf90f566dab51574b942bae36748661d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c1f4007207ab494ba3bc1b4e42c39ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCamera: {fileID: 0}
   lasermesh: {fileID: 1487512928182529661}
 --- !u!23 &1487512928182529661
 MeshRenderer:
