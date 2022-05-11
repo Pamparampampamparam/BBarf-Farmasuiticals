@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1487512928182529660}
   m_Layer: 3
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: LaserPointer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf90f566dab51574b942bae36748661d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCamera: {fileID: 0}
   lasermesh: {fileID: 1487512928182529661}
 --- !u!23 &1487512928182529661
 MeshRenderer:
@@ -108,4 +109,4 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 1.01, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
