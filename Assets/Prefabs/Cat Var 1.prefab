@@ -91,8 +91,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6598055052542826523}
   - component: {fileID: 6598055052542826522}
-  - component: {fileID: 6598055052542826524}
-  - component: {fileID: 5787522491836187592}
   - component: {fileID: 6598055052542826521}
   - component: {fileID: 6598055052542826520}
   - component: {fileID: 1303820922}
@@ -116,6 +114,7 @@ Transform:
   m_Children:
   - {fileID: 1461530558394111459}
   - {fileID: 7192662187843083795}
+  - {fileID: 6468153751544770706}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,48 +134,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6598055052542826524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6598055052542826525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb78808573af2441bf2a16c14a36251, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 1303820922}
-  view_distance: 15
-  view_angle: 90
-  view_height: 5
-  meshColor: {r: 1, g: 0, b: 0, a: 0.19607843}
-  targetLaserPointer:
-    serializedVersion: 2
-    m_Bits: 8
-  obstacles:
-    serializedVersion: 2
-    m_Bits: 1
-  Objects: []
-  speed: 7
-  viewMeshFilter: {fileID: 6201736316392406612}
-  meshResolution: 1
-  edgeResolveIterations: 4
-  edgeDstThreshold: 0.5
-  scanFrequency: 0.2
---- !u!114 &5787522491836187592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6598055052542826525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28f6428f901d85d4aac203c12c84bafb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &6598055052542826521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -188,8 +145,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 1.7023776, z: 3.051014}
-  m_Center: {x: 0, y: 0.95885026, z: -0.28764248}
+  m_Size: {x: 0.7, y: 1.8415794, z: 3.051014}
+  m_Center: {x: -0.0000000012272305, y: 0.8892493, z: -0.28764248}
 --- !u!135 &6598055052542826520
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -225,6 +182,80 @@ NavMeshAgent:
   m_BaseOffset: -0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &8677676955602087974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6468153751544770706}
+  - component: {fileID: 6083680628391585140}
+  - component: {fileID: 146180857604406895}
+  m_Layer: 6
+  m_Name: CatManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6468153751544770706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8677676955602087974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6598055052542826523}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6083680628391585140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8677676955602087974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb78808573af2441bf2a16c14a36251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1303820922}
+  view_distance: 15
+  view_angle: 90
+  view_height: 5
+  meshColor: {r: 1, g: 0, b: 0, a: 0.19607843}
+  targetLaserPointer:
+    serializedVersion: 2
+    m_Bits: 8
+  obstacles:
+    serializedVersion: 2
+    m_Bits: 1
+  Objects: []
+  speed: 7
+  viewMeshFilter: {fileID: 6201736316392406612}
+  meshResolution: 1
+  edgeResolveIterations: 4
+  edgeDstThreshold: 0.5
+  scanFrequency: 0.2
+--- !u!114 &146180857604406895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8677676955602087974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f6428f901d85d4aac203c12c84bafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1466482220038523767
 PrefabInstance:
   m_ObjectHideFlags: 0
