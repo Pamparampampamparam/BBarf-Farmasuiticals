@@ -59,31 +59,18 @@ public class CatManager : MonoBehaviour
                 this.laseractive = true;
         }
         followPreferedTarget();
-
-
     }
 
     private void followPreferedTarget()
     {
-        for(int i = 0; i < Objects.Count; i++)
+        if (laserpointer != null)
         {
-            if (Objects[i].CompareTag("LaserPointer"))
-            {
-                laserpointer = Objects[i];
-                agent.SetDestination(laserpointer.transform.position);
-                print("tracking laser pointer");
-            }
-            else if(Objects[i].CompareTag("CatFood"))
-            {
-                catFood = Objects[i];
-                agent.SetDestination(catFood.transform.position);
-                print("tracking catFood");
-            }
+            agent.SetDestination(laserpointer.transform.position);
+        } 
+        else if(catFood != null)
+        {
+            agent.SetDestination(catFood.transform.position);
         }
-        //if (Objects.Count != 0)
-        //{
-            //agent.SetDestination(Objects[0].transform.position);
-        //}
     }
 
     private void LateUpdate()
@@ -194,16 +181,25 @@ public class CatManager : MonoBehaviour
         count = Physics.OverlapSphereNonAlloc(transform.position, view_distance, colliders, targetLaserPointer, QueryTriggerInteraction.Collide);
 
         Objects.Clear();
+        laserpointer = null;
+        catFood = null;
         for (int i = 0; i < count; ++i)
         {
             GameObject obj = colliders[i].gameObject;
-            if (obj.CompareTag("CatFood")){
-                agent.SetDestination(obj.transform.position);
-                print("tracking catFood");
-            }
-            if (IsInSight(obj))
+
+            switch (obj.tag)
             {
-                Objects.Add(obj);
+                case "CatFood":
+                    catFood = obj;
+                    print(catFood);
+                break;
+
+                case "LaserPointer":
+                    if (IsInSight(obj))
+                    {
+                        laserpointer = obj;
+                    }
+                break;
             }
         }
     }
@@ -218,8 +214,6 @@ public class CatManager : MonoBehaviour
         {
             return false;
         }
-        //if (this.laseractive)
-        //{
         if (distance > view_distance)
         {
             return false;
@@ -393,12 +387,5 @@ public class CatManager : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("CatFood"))
-        {
-            agent.SetDestination(other.transform.position);
-        }
-    }
 }
 
