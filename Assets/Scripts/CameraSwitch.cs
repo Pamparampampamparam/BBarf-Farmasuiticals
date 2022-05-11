@@ -23,12 +23,12 @@ public class CameraSwitch : MonoBehaviour
 
     private void keyCodeCheck()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             ++this.cam_it;
             cameraPositionChange();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             --this.cam_it;
             cameraPositionChange();
