@@ -5,36 +5,21 @@ using UnityEngine;
 public class DoorOpen : MonoBehaviour
 {
     [SerializeField] GameObject[] doors;
+    [SerializeField] float lift_height;
 
     private void OnTriggerEnter(Collider col)
     {
-            for(int i = 0; i < doors.Length; i++)
-            {
-                if (doors[i].transform.position.y >= 20f)
-                {
-                    Vector3 upPosition = new Vector3(doors[i].transform.position.x, 20f, doors[i].transform.position.z);
-                    doors[i].transform.position = upPosition;
-                }
-                else if (doors[i].transform.position.y <= 10f)
-                {
-                    doors[i].transform.position += new Vector3(0, 10, 0);
-                }
-            }
+        for (int i = 0; i < doors.Length; i++)
+        {
+            doors[i].transform.position = new Vector3(doors[i].transform.position.x, doors[i].transform.position.y+lift_height, doors[i].transform.position.z);
+        }
     }
 
     private void OnTriggerExit(Collider col)
     {
-            for (int i = 0; i < doors.Length; i++)
-            {
-                if (doors[i].transform.position.y >= 20f)
-                {
-                    doors[i].transform.position -= new Vector3(0, 10, 0);
-                }
-                else if (doors[i].transform.position.y <= 10f)
-                {
-                    Vector3 downPosition = new Vector3(doors[i].transform.position.x, 10f, doors[i].transform.position.z);
-                    doors[i].transform.position = downPosition;
-                }
-            }
+        for (int i = 0; i < doors.Length; i++)
+        {
+            doors[i].transform.position = new Vector3(doors[i].transform.position.x, doors[i].transform.position.y - lift_height, doors[i].transform.position.z);
+        }
     }
 }
