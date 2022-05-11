@@ -3555,7 +3555,7 @@ GameObject:
   - component: {fileID: 1237786670}
   m_Layer: 0
   m_Name: NavMeshClimb
-  m_TagString: Untagged
+  m_TagString: climb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3588,7 +3588,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.23333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: e3b22b2da704ec34db7d5f47d476a9fe, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7b50206e5ebf72d408a05a32034dce3a, type: 2}
 --- !u!4 &1237786671
 Transform:
   m_ObjectHideFlags: 0
@@ -3597,7 +3597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237786669}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -47.38, y: 0, z: 0}
+  m_LocalPosition: {x: -47.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3738,7 +3738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304842184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48, y: 14.5, z: -24.3}
+  m_LocalPosition: {x: -48, y: 14.5, z: -24}
   m_LocalScale: {x: 1, y: 30, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
