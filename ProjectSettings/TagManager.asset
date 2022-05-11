@@ -7,6 +7,14 @@ TagManager:
   - Cat
   - In_Box
   - Out_Box
+  - Repel
+  - LaserPointer
+  - Level3
+  - Level5
+  - Level2
+  - Level1
+  - Level4
+  - CamButton
   layers:
   - Default
   - TransparentFX
