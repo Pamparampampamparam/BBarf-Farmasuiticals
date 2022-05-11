@@ -197,6 +197,10 @@ public class CatManager : MonoBehaviour
         for (int i = 0; i < count; ++i)
         {
             GameObject obj = colliders[i].gameObject;
+            if (obj.CompareTag("CatFood")){
+                agent.SetDestination(obj.transform.position);
+                print("tracking catFood");
+            }
             if (IsInSight(obj))
             {
                 Objects.Add(obj);
