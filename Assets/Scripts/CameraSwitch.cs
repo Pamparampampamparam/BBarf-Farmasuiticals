@@ -5,10 +5,9 @@ using UnityEngine;
 public class CameraSwitch : MonoBehaviour
 {
     [SerializeField] private Camera curr_camera;
+    public int cam_it = 0;
     [SerializeField] private Transform[] cameraPos;
-
-    private int cam_it = 0;
-
+    
     // Start is called before the first frame update
     void Start()
     {
