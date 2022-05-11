@@ -190,8 +190,11 @@ public class CatManager : MonoBehaviour
             switch (obj.tag)
             {
                 case "CatFood":
-                    catFood = obj;
-                    print(catFood);
+                    if (CanBeSmelled(obj))
+                    {
+                        catFood = obj;
+                    }
+                    //print(catFood);
                 break;
 
                 case "LaserPointer":
@@ -228,6 +231,22 @@ public class CatManager : MonoBehaviour
         {
             return false;
         }
+        origin.y += view_height / 2;
+        dest.y = origin.y;
+        if (Physics.Linecast(origin, dest, obstacles))
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public bool CanBeSmelled(GameObject obj)
+    {
+        Vector3 origin = transform.position;
+        Vector3 dest = obj.transform.position;
+        Vector3 direction = dest - origin;
+        float distance = direction.magnitude;
+
         origin.y += view_height / 2;
         dest.y = origin.y;
         if (Physics.Linecast(origin, dest, obstacles))

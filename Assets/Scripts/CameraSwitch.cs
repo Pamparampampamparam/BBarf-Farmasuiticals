@@ -5,10 +5,9 @@ using UnityEngine;
 public class CameraSwitch : MonoBehaviour
 {
     [SerializeField] private Camera curr_camera;
+    public int cam_it = 0;
     [SerializeField] private Transform[] cameraPos;
-
-    private int cam_it = 0;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +33,8 @@ public class CameraSwitch : MonoBehaviour
             --this.cam_it;
             cameraPositionChange();
         }
+        
+        
     }
 
     private void cameraPositionChange()
@@ -44,4 +45,6 @@ public class CameraSwitch : MonoBehaviour
         this.curr_camera.transform.position = cameraPos[this.cam_it].position;
         this.curr_camera.transform.rotation = cameraPos[this.cam_it].rotation;
     }
+
+   
 }
