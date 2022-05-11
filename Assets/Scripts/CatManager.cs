@@ -203,10 +203,10 @@ public class CatManager : MonoBehaviour
                     {
                         laserpointer = obj;
                     } 
-                    else if (gameObject.transform.rotation.x != 0)
-                    {
-                        laserpointer = obj;
-                    }
+                    //else if (gameObject.transform.rotation.x != 0)
+                    //{
+                    //    laserpointer = obj;
+                    //}
                 break;
             }
         }
