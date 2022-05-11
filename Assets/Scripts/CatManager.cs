@@ -203,6 +203,8 @@ public class CatManager : MonoBehaviour
                         laserpointer = obj;
                     }
                 break;
+
+                //case ""
             }
         }
     }
