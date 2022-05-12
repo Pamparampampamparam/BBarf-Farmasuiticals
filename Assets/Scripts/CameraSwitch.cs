@@ -112,6 +112,11 @@ public class CameraSwitch : MonoBehaviour
         }
     }
 
+    private void ButtonClick()
+    {
+
+    }
+
     private void cameraPositionChange()
     {
         if (this.cam_it >= cameraPos.Length) { this.cam_it = 0; }

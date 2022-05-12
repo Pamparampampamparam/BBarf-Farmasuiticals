@@ -2757,6 +2757,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 818250235}
     m_Modifications:
     - target: {fileID: 1487512928182529656, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
+      propertyPath: lasermesh
+      value: 
+      objectReference: {fileID: 1481496255}
+    - target: {fileID: 1487512928182529656, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
       propertyPath: currentCamera
       value: 
       objectReference: {fileID: 1156729737}
@@ -2814,6 +2818,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
+--- !u!23 &1481496255 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1487512928182529661, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
+  m_PrefabInstance: {fileID: 1481496254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1603195723
 GameObject:
   m_ObjectHideFlags: 0
