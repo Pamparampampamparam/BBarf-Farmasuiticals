@@ -20,5 +20,9 @@ public class IntroScreen_GameManager : MonoBehaviour
         {
             Load(Scene.Level0_Tutorial);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Load(Scene.Level0_Tutorial);
+        }
     }
 }
