@@ -1658,13 +1658,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 435298002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540d81168cf88174cb2aab2389a7bf77, type: 3}
+  m_Script: {fileID: 11500000, guid: 35f7e911d1bac4b4c864336bdd31769a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1336461131}
-  indicator:
-  - {fileID: 827093576}
 --- !u!114 &435298004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1677,7 +1675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2559022b55c3c104b98b009e3de4f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors: []
+  doors:
+  - {fileID: 1336461131}
 --- !u!4 &435298008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4707140850598067662, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
@@ -2632,15 +2631,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 843391435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540d81168cf88174cb2aab2389a7bf77, type: 3}
+  m_Script: {fileID: 11500000, guid: 35f7e911d1bac4b4c864336bdd31769a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1784981084}
   - {fileID: 365847010}
-  indicator:
-  - {fileID: 899856764}
-  - {fileID: 320761091}
 --- !u!114 &843391437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2653,7 +2649,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2559022b55c3c104b98b009e3de4f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors: []
+  doors:
+  - {fileID: 1336461131}
+  - {fileID: 1086672160}
 --- !u!4 &843391441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4707140850598067662, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
@@ -2689,13 +2687,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 855808793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540d81168cf88174cb2aab2389a7bf77, type: 3}
+  m_Script: {fileID: 11500000, guid: 35f7e911d1bac4b4c864336bdd31769a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 365847010}
-  indicator:
-  - {fileID: 320761091}
 --- !u!114 &855808795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2708,7 +2704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2559022b55c3c104b98b009e3de4f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors: []
+  doors:
+  - {fileID: 1086672160}
 --- !u!4 &855808799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4707140850598067662, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
@@ -4899,8 +4896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2559022b55c3c104b98b009e3de4f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors: []
---- !u!114 &1803989398
+  doors:
+  - {fileID: 1784981084}
+--- !u!114 &1803989395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4909,13 +4907,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803989393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540d81168cf88174cb2aab2389a7bf77, type: 3}
+  m_Script: {fileID: 11500000, guid: 35f7e911d1bac4b4c864336bdd31769a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1086672160}
-  indicator:
-  - {fileID: 1802437814}
 --- !u!4 &1803989399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4707140850598067662, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
@@ -5575,7 +5571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2559022b55c3c104b98b009e3de4f333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors: []
+  doors:
+  - {fileID: 1784981084}
 --- !u!4 &2076856622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4707140850598067662, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
