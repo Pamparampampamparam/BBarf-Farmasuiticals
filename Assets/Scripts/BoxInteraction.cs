@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoxInteraction : MonoBehaviour
 {
-    [SerializeField] Vector3 spawnPointOffset = new Vector3(0.0f, 0.0f, 1f);
+    [SerializeField] Vector3 spawnPointOffset = new Vector3(0.0f, 1f, 0f);
     public bool isInputOnly;
     public bool isOutputOnly;
     [SerializeField] GameObject ConnectedBox;
