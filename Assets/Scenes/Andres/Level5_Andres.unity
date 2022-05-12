@@ -9690,6 +9690,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1188549859}
     m_Modifications:
+    - target: {fileID: 901908511723595124, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017109367579292247, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2164066454126645561, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
       propertyPath: m_Name
       value: VideoCanvas
@@ -9782,6 +9790,26 @@ PrefabInstance:
       propertyPath: m_TargetCamera
       value: 
       objectReference: {fileID: 1188549858}
+    - target: {fileID: 3267849249028909578, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618417269436350190, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939784258862594425, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703943547524025436, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821906160768742116, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
 --- !u!224 &2059495428 stripped

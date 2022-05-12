@@ -18,9 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Ben/Level3_Ben.unity
     guid: 2490ead12eda8d94e8659767354fa0c8
   - enabled: 1
-    path: Assets/Scenes/Andres/Level5_Andres.unity
-    guid: 1adca09ccb2e1ac4baf485b6c8976ebe
-  - enabled: 1
     path: Assets/Scenes/Joyce/Level4_Joyce.unity
     guid: bbe66d443a2049a40965cf128f474c71
+  - enabled: 1
+    path: Assets/Scenes/Andres/Level5_Andres.unity
+    guid: 1adca09ccb2e1ac4baf485b6c8976ebe
   m_configObjects: {}

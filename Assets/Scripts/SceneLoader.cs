@@ -20,7 +20,10 @@ public class SceneLoader : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
-            //SceneManager.LoadScene(currentScene);
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SceneManager.LoadScene("Level0_Tutorial");
         }
     }
 
