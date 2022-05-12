@@ -6,8 +6,8 @@ public class DoorOpen : MonoBehaviour
 {
     [SerializeField] GameObject[] doors;
     [SerializeField] GameObject[] indicator;
-    Color red = new Color(200, 0, 0, 1);
-    Color green = new Color(0, 200, 0, 1);
+    //Color red = new Color(200, 0, 0, 1);
+    //Color green = new Color(0, 200, 0, 1);
 
     [SerializeField] float lift_height;
 
