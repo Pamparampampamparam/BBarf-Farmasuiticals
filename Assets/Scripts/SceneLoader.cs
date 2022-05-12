@@ -45,11 +45,11 @@ public class SceneLoader : MonoBehaviour
         }
         if (other.gameObject.tag == "Level4")
         {
-            SceneManager.LoadScene("Level4_Andres");
+            SceneManager.LoadScene("Level4_Joyce");
         }
         if (other.gameObject.tag == "Level5")
         {
-            SceneManager.LoadScene("Level5_Joyce");
+            SceneManager.LoadScene("Level5_Andres");
         }
     }
 }
