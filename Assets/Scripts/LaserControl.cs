@@ -47,8 +47,4 @@ public class LaserControl : MonoBehaviour
             transform.position = raycastHit.point;
         }
     }
-    //public void setMainCamera(Camera setCam)
-    //{
-    //    currentCamera = setCam;
-    //}
 }
