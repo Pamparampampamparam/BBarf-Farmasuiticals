@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5670095032649671617}
   - component: {fileID: 5645680933948981541}
   - component: {fileID: 5645680933948981542}
+  - component: {fileID: 335298147}
   m_Layer: 0
   m_Name: In_BoxA
-  m_TagString: In_Box
+  m_TagString: Out_Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5646740248719440095}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.2, y: 0, z: -26.8}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
@@ -95,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.60754, z: 1.5}
-  m_Center: {x: 0, y: 0.0037700385, z: 0}
+  m_Size: {x: 0.6, y: 0.6, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5645680933948981541
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,3 +130,19 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &335298147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646740248719440095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146e872820dbbec45a36625ec3f953bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointOffset: {x: 0, y: 2, z: 0}
+  isInputOnly: 0
+  isOutputOnly: 1
+  ConnectedBox: {fileID: 0}
