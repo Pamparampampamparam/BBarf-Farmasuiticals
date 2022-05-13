@@ -4565,6 +4565,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1487512928182529656, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
+      propertyPath: lasermesh
+      value: 
+      objectReference: {fileID: 1664030207}
+    - target: {fileID: 1487512928182529656, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
       propertyPath: currentCamera
       value: 
       objectReference: {fileID: 1857239360}
@@ -4625,6 +4629,11 @@ PrefabInstance:
 --- !u!1 &1664030204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1487512928182529657, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
+  m_PrefabInstance: {fileID: 1664030203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1664030207 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1487512928182529661, guid: 09288221935f54b41bf07301dc6d983c, type: 3}
   m_PrefabInstance: {fileID: 1664030203}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1664030208 stripped
