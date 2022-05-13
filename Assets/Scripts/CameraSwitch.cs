@@ -32,13 +32,13 @@ public class CameraSwitch : MonoBehaviour
         {
             ++this.cam_it;
             cameraPositionChange();
-
+        
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             --this.cam_it;
             cameraPositionChange();
-
+        
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha0))
@@ -127,6 +127,4 @@ public class CameraSwitch : MonoBehaviour
 
         UpdateCameraButtons();
     }
-
-   
 }
