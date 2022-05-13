@@ -20,18 +20,29 @@ public class ClimbWall : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter(Collision collision)
+    //public void OnCollisionEnter(Collision collision)
+    //{
+    //if (collision.gameObject.layer == 6)
+    //{
+    //isClimbing = true;
+    //Debug.Log("Climbing");
+    //}
+    //}
+
+    //public void OnCollisionExit(Collision collision)
+    //{
+    //isClimbing = false;
+    //Debug.Log("Not Climbing");
+    //}
+
+    public void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.layer == 6)
-        {
-            isClimbing = true;
-            Debug.Log("Climbing");
-        }
+        isClimbing = true;
+        Debug.Log("Climbing!!!!");
     }
 
     public void OnCollisionExit(Collision collision)
     {
         isClimbing = false;
-        Debug.Log("Not Climbing");
     }
 }
