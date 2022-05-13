@@ -467,7 +467,7 @@ Transform:
   - {fileID: 320761092}
   - {fileID: 827093577}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &132725287
 PrefabInstance:
@@ -1709,6 +1709,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 711867236}
     m_Modifications:
+    - target: {fileID: 6083680628391585140, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: climbableWall
+      value: 
+      objectReference: {fileID: 1487002933}
     - target: {fileID: 6598055052542826522, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1774,6 +1778,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 711867236}
     m_Modifications:
+    - target: {fileID: 6083680628391585140, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: climbableWall
+      value: 
+      objectReference: {fileID: 1487002933}
     - target: {fileID: 6598055052542826522, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -2333,7 +2341,7 @@ Transform:
   - {fileID: 1632825516}
   - {fileID: 1987498450}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729058308
 GameObject:
@@ -3093,7 +3101,7 @@ Transform:
   - {fileID: 435298008}
   - {fileID: 2076856622}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &982719213
 GameObject:
@@ -3756,6 +3764,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 711867236}
     m_Modifications:
+    - target: {fileID: 6083680628391585140, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: climbableWall
+      value: 
+      objectReference: {fileID: 1487002933}
     - target: {fileID: 6598055052542826522, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -3863,7 +3875,7 @@ Transform:
   - {fileID: 1592872436}
   - {fileID: 1274827130}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274827129
 GameObject:
@@ -3974,7 +3986,7 @@ GameObject:
   - component: {fileID: 1304842185}
   m_Layer: 0
   m_Name: StorDeadEndClimb
-  m_TagString: Untagged
+  m_TagString: climb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4051,10 +4063,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -48, y: 14.5, z: -24}
   m_LocalScale: {x: 1, y: 30, z: 10}
-  m_Children:
-  - {fileID: 1487002937}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1336461131
 GameObject:
@@ -4180,6 +4191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 711867236}
     m_Modifications:
+    - target: {fileID: 6083680628391585140, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: climbableWall
+      value: 
+      objectReference: {fileID: 1487002933}
     - target: {fileID: 6598055052542826522, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -4206,15 +4221,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4250,6 +4265,7 @@ GameObject:
   - component: {fileID: 1487002936}
   - component: {fileID: 1487002935}
   - component: {fileID: 1487002934}
+  - component: {fileID: 1487002938}
   m_Layer: 8
   m_Name: StorWallClimb
   m_TagString: climb
@@ -4327,12 +4343,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487002933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2000122, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -47.799988, y: 14.5, z: -24}
+  m_LocalScale: {x: 1, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1304842188}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1487002938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487002933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2beee6e8c43f484fa8da9d93a83f86d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClimbing: 0
 --- !u!1 &1592872435
 GameObject:
   m_ObjectHideFlags: 0
@@ -5283,7 +5312,7 @@ Transform:
   - {fileID: 729058311}
   - {fileID: 97454300}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1987498450 stripped
 Transform:

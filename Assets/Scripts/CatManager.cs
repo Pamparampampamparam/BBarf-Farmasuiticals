@@ -33,6 +33,10 @@ public class CatManager : MonoBehaviour
     public float edgeDstThreshold;
 
     private bool laseractive = true;
+    //WALL CLIMBING BS
+    bool isClimbing;
+    //ClimbWall climbwall;
+    [SerializeField] GameObject climbableWall;
 
 
     [SerializeField] private float scanFrequency = 0.2f;
@@ -47,6 +51,10 @@ public class CatManager : MonoBehaviour
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
         StartCoroutine(ScanDelay(scanFrequency));
+
+        //WALL CLIMB
+        //climbwall = GetComponent<ClimbWall>();
+        climbableWall.GetComponent<ClimbWall>();
     }
 
     // Update is called once per frame
@@ -203,10 +211,11 @@ public class CatManager : MonoBehaviour
                     {
                         laserpointer = obj;
                     } 
-                    //else if (gameObject.transform.rotation.x != 0)
-                    //{
-                    //    laserpointer = obj;
-                    //}
+                    //else if(gameObject.transform.rotation.x != 0)
+                    else if (climbableWall.GetComponent<ClimbWall>().isClimbing == true)
+                    {
+                        laserpointer = obj;
+                    }
                 break;
             }
         }
@@ -410,4 +419,16 @@ public class CatManager : MonoBehaviour
             pointB = _pointB;
         }
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+        //if(collision.gameObject.layer == 8)
+        //{
+            //isClimbing = true;
+        //}
+    //}
+    //private void OnCollisionExit(Collision collision)
+    //{
+        //isClimbing = false;
+    //}
 }
