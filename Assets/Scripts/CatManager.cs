@@ -36,7 +36,7 @@ public class CatManager : MonoBehaviour
     //WALL CLIMBING BS
     bool isClimbing;
     //ClimbWall climbwall;
-    [SerializeField] GameObject climbableWall;
+    [SerializeField] ClimbWall climbableWall;
 
 
     [SerializeField] private float scanFrequency = 0.2f;
@@ -54,7 +54,6 @@ public class CatManager : MonoBehaviour
 
         //WALL CLIMB
         //climbwall = GetComponent<ClimbWall>();
-        climbableWall.GetComponent<ClimbWall>();
     }
 
     // Update is called once per frame
@@ -212,7 +211,7 @@ public class CatManager : MonoBehaviour
                         laserpointer = obj;
                     } 
                     //else if(gameObject.transform.rotation.x != 0)
-                    else if (climbableWall.GetComponent<ClimbWall>().isClimbing == true)
+                    else if (climbableWall.isClimbing == true)
                     {
                         laserpointer = obj;
                     }
