@@ -6,6 +6,7 @@ public class ClimbWall : MonoBehaviour
 {
     //improvements need to be made to this!!!
     Rigidbody cat;
+    public bool isClimbing;
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +20,18 @@ public class ClimbWall : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "climb")
+        if (collision.gameObject.layer == 6)
         {
-            cat.useGravity = false;
+            isClimbing = true;
+            Debug.Log("Climbing");
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    public void OnCollisionExit(Collision collision)
     {
-        cat.useGravity = true;
+        isClimbing = false;
+        Debug.Log("Not Climbing");
     }
 }
