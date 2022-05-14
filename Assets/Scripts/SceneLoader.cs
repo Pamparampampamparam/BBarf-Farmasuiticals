@@ -30,7 +30,11 @@ public class SceneLoader : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Level 0 Portal")
+        if (other.gameObject.tag == "Level-1IntroScreen")
+        {
+            SceneManager.LoadScene("Intro_Screen");
+        }
+        if (other.gameObject.tag == "Level0Tutorial")
         {
             SceneManager.LoadScene("Level0_Tutorial");
         }

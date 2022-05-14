@@ -4197,6 +4197,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1588707872}
     m_Modifications:
+    - target: {fileID: 6083680628391585140, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: climbableWall
+      value: 
+      objectReference: {fileID: 1899909974}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -5825,6 +5829,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1588707872}
     m_Modifications:
+    - target: {fileID: 6083680628391585140, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: climbableWall
+      value: 
+      objectReference: {fileID: 1899909974}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -6782,7 +6790,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267851152}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 4}
@@ -9708,6 +9716,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1588707872}
     m_Modifications:
+    - target: {fileID: 6083680628391585140, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: climbableWall
+      value: 
+      objectReference: {fileID: 1899909974}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -10166,6 +10178,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1588707872}
     m_Modifications:
+    - target: {fileID: 6083680628391585140, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
+      propertyPath: climbableWall
+      value: 
+      objectReference: {fileID: 1899909974}
     - target: {fileID: 6598055052542826523, guid: 1c38e30e4cbb90c4482fbaa61ac2d136, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -11053,6 +11069,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3904872950282300315, guid: bdca6b23d31da8b4085832dfe309c524, type: 3}
   m_PrefabInstance: {fileID: 1889070054}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1899909970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3904872950282300319, guid: bdca6b23d31da8b4085832dfe309c524, type: 3}
+  m_PrefabInstance: {fileID: 1396391573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1899909974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899909970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2beee6e8c43f484fa8da9d93a83f86d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClimbing: 0
 --- !u!1 &1915078824
 GameObject:
   m_ObjectHideFlags: 0
@@ -12723,7 +12757,7 @@ MonoBehaviour:
 
 
     Oops, i think you''ll need more cats
-    then that
+    than that
 
 
 
