@@ -15,6 +15,10 @@ TagManager:
   - Level5
   - CatFood
   - Level0Tutorial
+  - CamButton
+  - Out_Box
+  - In_Box
+  - Level-1IntroScreen
   layers:
   - Default
   - TransparentFX
