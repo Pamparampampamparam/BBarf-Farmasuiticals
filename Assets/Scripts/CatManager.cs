@@ -205,7 +205,7 @@ public class CatManager : MonoBehaviour
                     {
                         laserpointer = obj;
                     } 
-                    else if (climbableWall.isClimbing == true && !this.laseractive)
+                    else if (climbableWall.isClimbing == true && this.laseractive)
                     {
                         laserpointer = obj;
                     }
