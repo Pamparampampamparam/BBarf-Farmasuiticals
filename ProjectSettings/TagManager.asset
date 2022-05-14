@@ -19,6 +19,7 @@ TagManager:
   - Out_Box
   - In_Box
   - Level-1IntroScreen
+  - Level-2CatPinball
   layers:
   - Default
   - TransparentFX
