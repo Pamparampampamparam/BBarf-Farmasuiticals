@@ -32,7 +32,7 @@ public class SceneLoader : MonoBehaviour
     {
         if (other.gameObject.tag == "Level-2CatPinball")
         {
-            SceneManager.LoadScene("Cat_Pinball");
+            SceneManager.LoadScene("CatPinball");
         }
         if (other.gameObject.tag == "Level-1IntroScreen")
         {
