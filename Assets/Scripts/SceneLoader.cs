@@ -30,6 +30,10 @@ public class SceneLoader : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Level-2CatPinball")
+        {
+            SceneManager.LoadScene("Cat_Pinball");
+        }
         if (other.gameObject.tag == "Level-1IntroScreen")
         {
             SceneManager.LoadScene("Intro_Screen");
