@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 97454299}
   - component: {fileID: 97454298}
   m_Layer: 0
-  m_Name: Main Camera (5)
+  m_Name: Main Camera (4)
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2621,7 +2621,7 @@ GameObject:
   - component: {fileID: 729058310}
   - component: {fileID: 729058309}
   m_Layer: 0
-  m_Name: Main Camera (4)
+  m_Name: Main Camera (3)
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2890,7 +2890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3618417269436350190, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4939784258862594425, guid: f98f93afaa415ed47b0df897e520ccd1, type: 3}
       propertyPath: m_IsActive
