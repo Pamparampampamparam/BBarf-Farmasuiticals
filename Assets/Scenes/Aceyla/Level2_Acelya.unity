@@ -5039,6 +5039,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3548928271288758710, guid: 7ffbc452993430344a0cef58018b995b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.41
+      objectReference: {fileID: 0}
     - target: {fileID: 5763110153597017706, guid: 7ffbc452993430344a0cef58018b995b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5125,7 +5129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6453886204117813643, guid: 7ffbc452993430344a0cef58018b995b, type: 3}
       propertyPath: m_text
-      value: CLIMB KITTY, CLIMB!
+      value: CLIMB KITTY!
       objectReference: {fileID: 0}
     - target: {fileID: 6923443626811029135, guid: 7ffbc452993430344a0cef58018b995b, type: 3}
       propertyPath: m_Name
