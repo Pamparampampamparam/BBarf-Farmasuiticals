@@ -3034,10 +3034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 652019493}
-  - {fileID: 365847010}
   indicator:
   - {fileID: 899856764}
-  - {fileID: 320761091}
 --- !u!114 &843391437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3052,10 +3050,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1336461131}
-  - {fileID: 1086672160}
   indicator:
   - {fileID: 827093576}
-  - {fileID: 1802437814}
 --- !u!4 &843391441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4707140850598067662, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
@@ -5240,9 +5236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doors:
-  - {fileID: 652019493}
+  - {fileID: 1336461131}
   indicator:
-  - {fileID: 899856764}
+  - {fileID: 827093576}
 --- !u!114 &1803989395
 MonoBehaviour:
   m_ObjectHideFlags: 0
