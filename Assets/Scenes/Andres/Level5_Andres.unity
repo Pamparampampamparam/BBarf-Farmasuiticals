@@ -128,6 +128,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3904872950282300315, guid: bdca6b23d31da8b4085832dfe309c524, type: 3}
   m_PrefabInstance: {fileID: 811257878}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &29121719 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5194792798430327963, guid: 56607fb421b89514083bb9e4dd106972, type: 3}
+  m_PrefabInstance: {fileID: 1239553432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &29520550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2758,6 +2763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1588707872}
     m_Modifications:
+    - target: {fileID: 982587926798906360, guid: 8accf571579300e42b94870be576c162, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d90bda54a41c7f741a820f2ceff7bbdf, type: 2}
     - target: {fileID: 4843780039644646826, guid: 8accf571579300e42b94870be576c162, type: 3}
       propertyPath: m_Name
       value: Persian
@@ -2806,6 +2815,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5531549646487843011, guid: 8accf571579300e42b94870be576c162, type: 3}
+      propertyPath: moveAnimator
+      value: 
+      objectReference: {fileID: 1934876691}
     - target: {fileID: 5531549646487843011, guid: 8accf571579300e42b94870be576c162, type: 3}
       propertyPath: climbableWall
       value: 
@@ -7181,9 +7194,17 @@ PrefabInstance:
       value: BlackWhite
       objectReference: {fileID: 0}
     - target: {fileID: 3951557689967368259, guid: 56607fb421b89514083bb9e4dd106972, type: 3}
+      propertyPath: moveAnimator
+      value: 
+      objectReference: {fileID: 29121719}
+    - target: {fileID: 3951557689967368259, guid: 56607fb421b89514083bb9e4dd106972, type: 3}
       propertyPath: climbableWall
       value: 
       objectReference: {fileID: 186847879}
+    - target: {fileID: 5194792798430327963, guid: 56607fb421b89514083bb9e4dd106972, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d90bda54a41c7f741a820f2ceff7bbdf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56607fb421b89514083bb9e4dd106972, type: 3}
 --- !u!1001 &1247274338
@@ -9742,6 +9763,11 @@ MonoBehaviour:
   doors: {fileID: 2021893105}
   lift_height: -30
   remains_up: 1
+--- !u!95 &1618216146 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9133279391768692633, guid: 1a50f44f719e9c446bf98f9a935fd7e7, type: 3}
+  m_PrefabInstance: {fileID: 1700867004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1648594687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9906,6 +9932,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1588707872}
     m_Modifications:
     - target: {fileID: 275949180621244502, guid: 8fd48907f9bad1c49a54e6ff7408dae6, type: 3}
+      propertyPath: moveAnimator
+      value: 
+      objectReference: {fileID: 1969622388}
+    - target: {fileID: 275949180621244502, guid: 8fd48907f9bad1c49a54e6ff7408dae6, type: 3}
       propertyPath: climbableWall
       value: 
       objectReference: {fileID: 186847879}
@@ -9961,6 +9991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White
       objectReference: {fileID: 0}
+    - target: {fileID: 6707090147135210531, guid: 8fd48907f9bad1c49a54e6ff7408dae6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d90bda54a41c7f741a820f2ceff7bbdf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fd48907f9bad1c49a54e6ff7408dae6, type: 3}
 --- !u!1001 &1700867004
@@ -9970,6 +10004,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1588707872}
     m_Modifications:
+    - target: {fileID: 9133279391768692633, guid: 1a50f44f719e9c446bf98f9a935fd7e7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d90bda54a41c7f741a820f2ceff7bbdf, type: 2}
     - target: {fileID: 9218185118721342762, guid: 1a50f44f719e9c446bf98f9a935fd7e7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10018,6 +10056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Abyssian
       objectReference: {fileID: 0}
+    - target: {fileID: 9218185120103455068, guid: 1a50f44f719e9c446bf98f9a935fd7e7, type: 3}
+      propertyPath: moveAnimator
+      value: 
+      objectReference: {fileID: 1618216146}
     - target: {fileID: 9218185120103455068, guid: 1a50f44f719e9c446bf98f9a935fd7e7, type: 3}
       propertyPath: climbableWall
       value: 
@@ -11559,6 +11601,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5646740248719440095, guid: 6ace068adc9a33640b9f0c266ffee3e5, type: 3}
   m_PrefabInstance: {fileID: 1925246430}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1934876691 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 982587926798906360, guid: 8accf571579300e42b94870be576c162, type: 3}
+  m_PrefabInstance: {fileID: 434061573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1945896589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11809,6 +11856,11 @@ NavMeshObstacle:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3904872950282300319, guid: bdca6b23d31da8b4085832dfe309c524, type: 3}
   m_PrefabInstance: {fileID: 916943123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1969622388 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6707090147135210531, guid: 8fd48907f9bad1c49a54e6ff7408dae6, type: 3}
+  m_PrefabInstance: {fileID: 1700840469}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1971571838
 GameObject:
