@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb78808573af2441bf2a16c14a36251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveAnimator: {fileID: 5856000801539015862}
   agent: {fileID: 6198410001053698934}
   view_distance: 15
   view_angle: 90
@@ -324,10 +325,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95520416580286518, guid: 7ca05b3f0df92f6409753d5e456eba4b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d90bda54a41c7f741a820f2ceff7bbdf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca05b3f0df92f6409753d5e456eba4b, type: 3}
 --- !u!4 &5771637650258978504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4243284960909896, guid: 7ca05b3f0df92f6409753d5e456eba4b, type: 3}
+  m_PrefabInstance: {fileID: 5771339711653248128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5856000801539015862 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95520416580286518, guid: 7ca05b3f0df92f6409753d5e456eba4b, type: 3}
   m_PrefabInstance: {fileID: 5771339711653248128}
   m_PrefabAsset: {fileID: 0}
