@@ -20,14 +20,25 @@ public class SceneLoader : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
-            //SceneManager.LoadScene(currentScene);
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SceneManager.LoadScene("Level0_Tutorial");
         }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Level 0 Portal")
+        if (other.gameObject.tag == "Level-2CatPinball")
+        {
+            SceneManager.LoadScene("CatPinball");
+        }
+        if (other.gameObject.tag == "Level-1IntroScreen")
+        {
+            SceneManager.LoadScene("Intro_Screen");
+        }
+        if (other.gameObject.tag == "Level0Tutorial")
         {
             SceneManager.LoadScene("Level0_Tutorial");
         }
@@ -45,11 +56,11 @@ public class SceneLoader : MonoBehaviour
         }
         if (other.gameObject.tag == "Level4")
         {
-            SceneManager.LoadScene("Level4_Andres");
+            SceneManager.LoadScene("Level4_Joyce");
         }
         if (other.gameObject.tag == "Level5")
         {
-            SceneManager.LoadScene("Level5_Joyce");
+            SceneManager.LoadScene("Level5_Andres");
         }
     }
 }

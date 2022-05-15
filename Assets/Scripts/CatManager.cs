@@ -34,6 +34,9 @@ public class CatManager : MonoBehaviour
 
     private bool laseractive = true;
 
+    bool isClimbing;
+    [SerializeField] ClimbWall climbableWall;
+
 
     [SerializeField] private float scanFrequency = 0.2f;
     Mesh mesh;
@@ -195,7 +198,6 @@ public class CatManager : MonoBehaviour
                     {
                         catFood = obj;
                     }
-                    //print(catFood);
                 break;
 
                 case "LaserPointer":
@@ -203,10 +205,10 @@ public class CatManager : MonoBehaviour
                     {
                         laserpointer = obj;
                     } 
-                    //else if (gameObject.transform.rotation.x != 0)
-                    //{
-                    //    laserpointer = obj;
-                    //}
+                    else if (climbableWall.isClimbing == true && this.laseractive)
+                    {
+                        laserpointer = obj;
+                    }
                 break;
             }
         }
@@ -410,4 +412,5 @@ public class CatManager : MonoBehaviour
             pointB = _pointB;
         }
     }
+    
 }
