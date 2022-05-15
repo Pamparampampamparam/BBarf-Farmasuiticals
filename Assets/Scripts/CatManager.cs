@@ -9,6 +9,11 @@ public class CatManager : MonoBehaviour
     private GameObject laserpointer;
     private GameObject catFood;
 
+    //Animation Stuff
+    public Animator moveAnimator;
+    private float movementSqrMagnitude;
+    private Vector3 movement;
+
     public NavMeshAgent agent;
 
     public float view_distance = 10f;
@@ -63,7 +68,23 @@ public class CatManager : MonoBehaviour
                 this.laseractive = true;
         }
         followPreferedTarget();
+        GetMovementVector();
+        WalkingAnimation();
     }
+
+    void GetMovementVector()
+    {
+        movement.x = agent.speed;//transform.position.x;//Input.GetAxis("Horizontal");
+        movement.z = agent.speed;//transform.position.y;//Input.GetAxis("Vertical");
+        movement = Vector3.ClampMagnitude(movement, 1.0f);
+        movementSqrMagnitude = movement.sqrMagnitude;
+    }
+    void WalkingAnimation()
+    {
+        moveAnimator.SetFloat("MoveSpeed", movementSqrMagnitude);
+    }
+
+
 
     private void followPreferedTarget()
     {
@@ -81,6 +102,8 @@ public class CatManager : MonoBehaviour
     {
         DrawFieldOfView();
     }
+
+
 
     private Mesh CreateWedgeMesh()
     {
