@@ -2409,13 +2409,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354863517}
-  m_LocalRotation: {x: -0.0075593516, y: 0.6657008, z: -0.74607927, w: 0.012293604}
-  m_LocalPosition: {x: 2.57, y: 99.02, z: -253}
+  m_LocalRotation: {x: 0.105330005, y: 0.7576777, z: -0.6401096, w: -0.071343645}
+  m_LocalPosition: {x: 7.35, y: 92.65, z: -244.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 855990506}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 83.288, y: -346.318, z: -525.934}
+  m_LocalEulerAnglesHint: {x: 72.739, y: -125.035, z: -302.249}
 --- !u!81 &354863519
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3164,13 +3164,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483142108}
-  m_LocalRotation: {x: -0.3605641, y: -0.3778373, z: 0.6707363, w: -0.5266358}
-  m_LocalPosition: {x: 44.62, y: 98.12, z: -221.67}
+  m_LocalRotation: {x: -0.3556716, y: -0.3776721, z: 0.37494612, w: -0.7682949}
+  m_LocalPosition: {x: 25.02, y: 85.28, z: -221.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 855990506}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 62.453, y: -10.682, z: -470.212}
+  m_LocalEulerAnglesHint: {x: 56.071, y: 34.185, z: -393.428}
 --- !u!81 &483142110
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7240,13 +7240,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249807590}
-  m_LocalRotation: {x: -0.48495126, y: 0.0071728313, z: 0.007757277, w: -0.8744774}
-  m_LocalPosition: {x: -6.4, y: 93.4, z: -216.2}
+  m_LocalRotation: {x: -0.2954704, y: 0.005431071, z: 0.009062468, w: -0.95529354}
+  m_LocalPosition: {x: -5.87, y: 83.85, z: -216.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 855990506}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 58, y: 357.83, z: -2.22}
+  m_LocalEulerAnglesHint: {x: 34.362, y: 358.908, z: -1.425}
 --- !u!81 &1249807592
 AudioListener:
   m_ObjectHideFlags: 0
