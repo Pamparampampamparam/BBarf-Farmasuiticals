@@ -110,4 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 0}
+  indicator: []
   lift_height: 5
