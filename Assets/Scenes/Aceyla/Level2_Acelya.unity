@@ -1783,8 +1783,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1336461131}
+  - {fileID: 1086672160}
   indicator:
   - {fileID: 827093576}
+  - {fileID: 1802437814}
   gateClose: {fileID: 313219255}
 --- !u!114 &435298004
 MonoBehaviour:
@@ -4758,8 +4760,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1336461131}
+  - {fileID: 1086672160}
   indicator:
   - {fileID: 827093576}
+  - {fileID: 1802437814}
   gateOpen: {fileID: 623368384}
 --- !u!114 &1803989395
 MonoBehaviour:
@@ -4773,10 +4777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f7e911d1bac4b4c864336bdd31769a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors:
-  - {fileID: 1086672160}
-  indicator:
-  - {fileID: 1802437814}
+  doors: []
+  indicator: []
   gateClose: {fileID: 313219255}
 --- !u!4 &1803989399 stripped
 Transform:
@@ -5602,9 +5604,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 652019493}
+  - {fileID: 365847010}
   indicator:
   - {fileID: 899856764}
+  - {fileID: 320761091}
   gateOpen: {fileID: 623368384}
+--- !u!114 &2076856619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076856617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f7e911d1bac4b4c864336bdd31769a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doors:
+  - {fileID: 1086672160}
+  indicator:
+  - {fileID: 1802437814}
+  gateClose: {fileID: 313219255}
 --- !u!4 &2076856622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4707140850598067662, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
