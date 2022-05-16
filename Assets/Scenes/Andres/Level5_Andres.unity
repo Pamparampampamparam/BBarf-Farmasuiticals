@@ -13602,6 +13602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cucmber (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 520553081255762424, guid: 0edc6e91b5875704c99aa745ed4ac274, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 520553081255762426, guid: 0edc6e91b5875704c99aa745ed4ac274, type: 3}
       propertyPath: m_CastShadows
       value: 0
