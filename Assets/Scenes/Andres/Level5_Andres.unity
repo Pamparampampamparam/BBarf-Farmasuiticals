@@ -3760,7 +3760,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Careful!\nCats will break the laws of physics \nto escape from cucmbers!
-    \nmabye even clip through walls... ;)"
+    \nmabye even clip through walls... ;)\nThat reload level option might come in
+    handy"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8849,7 +8850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.6
+      value: -18.34
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8857,23 +8858,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.31
+      value: 3.44
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.2702783
+      value: -0.27059814
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2709181
+      value: 0.65328175
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.65341383
+      value: -0.6532813
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.65314883
+      value: -0.27059796
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8881,7 +8882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 89.944
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4061991105280387388, guid: 9da8226b6c4c90e4790f4213926aba92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

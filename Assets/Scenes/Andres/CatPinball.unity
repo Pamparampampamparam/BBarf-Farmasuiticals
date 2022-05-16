@@ -1593,6 +1593,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5645680933948981541, guid: 6ace068adc9a33640b9f0c266ffee3e5, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645680933948981541, guid: 6ace068adc9a33640b9f0c266ffee3e5, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5646740248719440095, guid: 6ace068adc9a33640b9f0c266ffee3e5, type: 3}
       propertyPath: m_Name
       value: Out_BoxA (1)
