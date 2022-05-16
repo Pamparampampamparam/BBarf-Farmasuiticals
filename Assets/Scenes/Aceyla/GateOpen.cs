@@ -6,6 +6,7 @@ public class GateOpen : MonoBehaviour
 {
     [SerializeField] GameObject[] doors;
     [SerializeField] GameObject[] indicator;
+    [SerializeField] AudioSource gateOpen;
     Color red = new Color(200, 0, 0, 1);
     Color green = new Color(0, 200, 0, 1);
 
@@ -23,6 +24,7 @@ public class GateOpen : MonoBehaviour
                 {
                     doors[i].transform.position += new Vector3(0, 10, 0);
                     indicator[i].GetComponent<Renderer>().material.SetColor("_Color", green);
+                    gateOpen.Play();
                 }
             }
     }
