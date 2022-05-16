@@ -12,7 +12,6 @@ public class PressurePlateAndresVer : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
         GameObject Cat = col.gameObject;
-
         if (Cat.tag == "Repel")
         {
             switchSound.Play();
