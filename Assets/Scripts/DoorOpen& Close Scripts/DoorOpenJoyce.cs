@@ -6,6 +6,9 @@ public class DoorOpenJoyce : MonoBehaviour
 {
     [SerializeField] GameObject[] doors;
     [SerializeField] GameObject[] indicator;
+    [SerializeField] AudioSource switchAudio;
+    [SerializeField] AudioClip clip1;
+    [SerializeField] AudioClip clip2;
     Color red = new Color(200, 0, 0, 1);
     Color green = new Color(0, 200, 0, 1);
 
@@ -23,6 +26,12 @@ public class DoorOpenJoyce : MonoBehaviour
                 //indicator[i].GetComponent<Renderer>().material.SetColor("_Color", green);
             }
         }
+        if (active.Count == 1)
+        {
+            switchAudio.clip = clip1;
+            switchAudio.Play();
+        }
+        
     }
 
     private void OnTriggerExit(Collider col)
@@ -36,5 +45,11 @@ public class DoorOpenJoyce : MonoBehaviour
                 //indicator[i].GetComponent<Renderer>().material.SetColor("_Color", red);
             }
         }
+        if (active.Count == 0)
+        {
+            switchAudio.clip = clip2;
+            switchAudio.Play();
+        }
+        
     }
 }
