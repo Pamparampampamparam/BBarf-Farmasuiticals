@@ -13,6 +13,8 @@ public class CatManager : MonoBehaviour
     public Animator moveAnimator;
     private float movementSqrMagnitude;
     private Vector3 movement;
+    private Rigidbody rb;
+    Vector3 lastPosition = Vector3.zero;
 
     public NavMeshAgent agent;
 
@@ -51,6 +53,7 @@ public class CatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //rb = GetComponentInParent<Rigidbody>();
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
@@ -67,17 +70,27 @@ public class CatManager : MonoBehaviour
             else
                 this.laseractive = true;
         }
+        //print(rb.velocity.x);
+        //print(rb.velocity.z);
+
         followPreferedTarget();
-        GetMovementVector();
+        //GetMovementVector();
         WalkingAnimation();
+    }
+    private void FixedUpdate()
+    {
+        movementSqrMagnitude = (transform.position - lastPosition).magnitude;
+        lastPosition = transform.position;
     }
 
     void GetMovementVector()
     {
-        movement.x = agent.speed;//transform.position.x;//Input.GetAxis("Horizontal");
-        movement.z = agent.speed;//transform.position.y;//Input.GetAxis("Vertical");
-        movement = Vector3.ClampMagnitude(movement, 1.0f);
-        movementSqrMagnitude = movement.sqrMagnitude;
+        //movement.x = rb.velocity.x;//transform.position.x;//Input.GetAxis("Horizontal");
+        //movement.z = rb.velocity.z; //transform.position.z;//agent.speed;//transform.position.y;//Input.GetAxis("Vertical");
+        ////movement.y = transform.position.y;
+        //movement = Vector3.ClampMagnitude(movement, 1.0f);
+
+        //movementSqrMagnitude = movement.sqrMagnitude;
     }
     void WalkingAnimation()
     {
