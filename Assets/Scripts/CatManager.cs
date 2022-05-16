@@ -74,17 +74,16 @@ public class CatManager : MonoBehaviour
         //print(rb.velocity.z);
 
         followPreferedTarget();
-        //GetMovementVector();
+        GetMovementVector();
         WalkingAnimation();
-    }
-    private void FixedUpdate()
-    {
-        movementSqrMagnitude = (transform.position - lastPosition).magnitude;
-        lastPosition = transform.position;
     }
 
     void GetMovementVector()
     {
+        movementSqrMagnitude = (transform.position - lastPosition).magnitude;
+        lastPosition = transform.position;
+        //print(movementSqrMagnitude + gameObject.name);
+
         //movement.x = rb.velocity.x;//transform.position.x;//Input.GetAxis("Horizontal");
         //movement.z = rb.velocity.z; //transform.position.z;//agent.speed;//transform.position.y;//Input.GetAxis("Vertical");
         ////movement.y = transform.position.y;
@@ -96,8 +95,6 @@ public class CatManager : MonoBehaviour
     {
         moveAnimator.SetFloat("MoveSpeed", movementSqrMagnitude);
     }
-
-
 
     private void followPreferedTarget()
     {
