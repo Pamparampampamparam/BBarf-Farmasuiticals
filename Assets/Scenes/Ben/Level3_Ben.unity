@@ -2195,8 +2195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858817146}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -12.190001, y: 7.9799995, z: -39.03}
-  m_LocalScale: {x: 1, y: 20.57, z: 59.7}
+  m_LocalPosition: {x: -12.190001, y: 6.3, z: -39.03}
+  m_LocalScale: {x: 1, y: 13.19401, z: 59.7}
   m_Children: []
   m_Father: {fileID: 1343751329}
   m_RootOrder: 2
@@ -3264,7 +3264,7 @@ PrefabInstance:
       objectReference: {fileID: 909365096}
     - target: {fileID: 9064648540935976307, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
       propertyPath: lift_height
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9064648540935976307, guid: c122a3c1e3ae0e549b63a9c985328ccb, type: 3}
       propertyPath: doors.Array.data[0]
