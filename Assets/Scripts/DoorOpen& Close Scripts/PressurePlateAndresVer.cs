@@ -7,6 +7,7 @@ public class PressurePlateAndresVer : MonoBehaviour
     [SerializeField] GameObject doors;
     [SerializeField] float lift_height;
     [SerializeField] bool remains_up;
+    [SerializeField] AudioSource switchSound;
 
     private void OnTriggerEnter(Collider col)
     {
@@ -14,6 +15,7 @@ public class PressurePlateAndresVer : MonoBehaviour
 
         if (Cat.tag == "Repel")
         {
+            switchSound.Play();
             doors.transform.position = new Vector3(doors.transform.position.x, doors.transform.position.y + lift_height, doors.transform.position.z);
         }
     }
@@ -26,6 +28,7 @@ public class PressurePlateAndresVer : MonoBehaviour
 
             if (Cat.tag == "Repel")
             {
+                switchSound.Play();
                 doors.transform.position = new Vector3(doors.transform.position.x, doors.transform.position.y - lift_height, doors.transform.position.z);
             }
         }
